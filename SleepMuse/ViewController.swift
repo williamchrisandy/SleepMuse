@@ -14,7 +14,8 @@ class ViewController: UIViewController
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         //JESI
-        
+        //TEST YEYYY
+        super.viewDidLoad() //DELETE AJAA
     }
 
 
