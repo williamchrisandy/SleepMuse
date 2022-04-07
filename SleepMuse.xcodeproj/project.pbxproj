@@ -14,6 +14,19 @@
 		3B202A3A27FEA45200A58166 /* SleepMuse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A3827FEA45200A58166 /* SleepMuse.xcdatamodeld */; };
 		3B202A3C27FEA45300A58166 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B202A3B27FEA45300A58166 /* Assets.xcassets */; };
 		3B202A3F27FEA45300A58166 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B202A3D27FEA45300A58166 /* LaunchScreen.storyboard */; };
+		3B202A4C27FEC04100A58166 /* Qhanza.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B202A4B27FEC04100A58166 /* Qhanza.storyboard */; };
+		3B202A4E27FEC04F00A58166 /* William.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B202A4D27FEC04F00A58166 /* William.storyboard */; };
+		3B202A5027FEC06400A58166 /* Jesi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B202A4F27FEC06400A58166 /* Jesi.storyboard */; };
+		3B202A5227FEC09F00A58166 /* InsertNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A5127FEC09F00A58166 /* InsertNameViewController.swift */; };
+		3B202A5427FEC12300A58166 /* FallAsleepDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A5327FEC12300A58166 /* FallAsleepDurationViewController.swift */; };
+		3B202A5627FEC18700A58166 /* SelectBedtimeReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A5527FEC18700A58166 /* SelectBedtimeReminderViewController.swift */; };
+		3B202A5827FEC1D400A58166 /* AllowNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A5727FEC1D400A58166 /* AllowNotificationViewController.swift */; };
+		3B202A5A27FEC1F400A58166 /* SetUpCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A5927FEC1F400A58166 /* SetUpCompleteViewController.swift */; };
+		3B202A5C27FEC20900A58166 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A5B27FEC20900A58166 /* HomeViewController.swift */; };
+		3B202A5E27FEC22800A58166 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A5D27FEC22800A58166 /* HistoryViewController.swift */; };
+		3B202A6027FEC26500A58166 /* StartBreathingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A5F27FEC26500A58166 /* StartBreathingViewController.swift */; };
+		3B202A6227FEC29600A58166 /* BreathingSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A6127FEC29600A58166 /* BreathingSessionViewController.swift */; };
+		3B202A6427FEC2B900A58166 /* BreathingSessionDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A6327FEC2B900A58166 /* BreathingSessionDoneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +39,19 @@
 		3B202A3B27FEA45300A58166 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B202A3E27FEA45300A58166 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B202A4027FEA45300A58166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B202A4B27FEC04100A58166 /* Qhanza.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Qhanza.storyboard; sourceTree = "<group>"; };
+		3B202A4D27FEC04F00A58166 /* William.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = William.storyboard; sourceTree = "<group>"; };
+		3B202A4F27FEC06400A58166 /* Jesi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Jesi.storyboard; sourceTree = "<group>"; };
+		3B202A5127FEC09F00A58166 /* InsertNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertNameViewController.swift; sourceTree = "<group>"; };
+		3B202A5327FEC12300A58166 /* FallAsleepDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallAsleepDurationViewController.swift; sourceTree = "<group>"; };
+		3B202A5527FEC18700A58166 /* SelectBedtimeReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBedtimeReminderViewController.swift; sourceTree = "<group>"; };
+		3B202A5727FEC1D400A58166 /* AllowNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowNotificationViewController.swift; sourceTree = "<group>"; };
+		3B202A5927FEC1F400A58166 /* SetUpCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpCompleteViewController.swift; sourceTree = "<group>"; };
+		3B202A5B27FEC20900A58166 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3B202A5D27FEC22800A58166 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		3B202A5F27FEC26500A58166 /* StartBreathingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartBreathingViewController.swift; sourceTree = "<group>"; };
+		3B202A6127FEC29600A58166 /* BreathingSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingSessionViewController.swift; sourceTree = "<group>"; };
+		3B202A6327FEC2B900A58166 /* BreathingSessionDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingSessionDoneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +87,22 @@
 				3B202A2F27FEA45200A58166 /* AppDelegate.swift */,
 				3B202A3127FEA45200A58166 /* SceneDelegate.swift */,
 				3B202A3327FEA45200A58166 /* ViewController.swift */,
-				3B202A3527FEA45200A58166 /* Main.storyboard */,
+				3B202A5127FEC09F00A58166 /* InsertNameViewController.swift */,
+				3B202A5327FEC12300A58166 /* FallAsleepDurationViewController.swift */,
+				3B202A5527FEC18700A58166 /* SelectBedtimeReminderViewController.swift */,
+				3B202A5727FEC1D400A58166 /* AllowNotificationViewController.swift */,
+				3B202A5927FEC1F400A58166 /* SetUpCompleteViewController.swift */,
+				3B202A5B27FEC20900A58166 /* HomeViewController.swift */,
+				3B202A5D27FEC22800A58166 /* HistoryViewController.swift */,
+				3B202A5F27FEC26500A58166 /* StartBreathingViewController.swift */,
+				3B202A6127FEC29600A58166 /* BreathingSessionViewController.swift */,
+				3B202A6327FEC2B900A58166 /* BreathingSessionDoneViewController.swift */,
 				3B202A3B27FEA45300A58166 /* Assets.xcassets */,
+				3B202A3527FEA45200A58166 /* Main.storyboard */,
 				3B202A3D27FEA45300A58166 /* LaunchScreen.storyboard */,
+				3B202A4B27FEC04100A58166 /* Qhanza.storyboard */,
+				3B202A4D27FEC04F00A58166 /* William.storyboard */,
+				3B202A4F27FEC06400A58166 /* Jesi.storyboard */,
 				3B202A4027FEA45300A58166 /* Info.plist */,
 				3B202A3827FEA45200A58166 /* SleepMuse.xcdatamodeld */,
 			);
@@ -128,9 +167,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B202A4E27FEC04F00A58166 /* William.storyboard in Resources */,
+				3B202A5027FEC06400A58166 /* Jesi.storyboard in Resources */,
 				3B202A3F27FEA45300A58166 /* LaunchScreen.storyboard in Resources */,
 				3B202A3C27FEA45300A58166 /* Assets.xcassets in Resources */,
 				3B202A3727FEA45200A58166 /* Main.storyboard in Resources */,
+				3B202A4C27FEC04100A58166 /* Qhanza.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,10 +183,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B202A6427FEC2B900A58166 /* BreathingSessionDoneViewController.swift in Sources */,
+				3B202A5227FEC09F00A58166 /* InsertNameViewController.swift in Sources */,
+				3B202A5627FEC18700A58166 /* SelectBedtimeReminderViewController.swift in Sources */,
 				3B202A3427FEA45200A58166 /* ViewController.swift in Sources */,
 				3B202A3A27FEA45200A58166 /* SleepMuse.xcdatamodeld in Sources */,
+				3B202A5427FEC12300A58166 /* FallAsleepDurationViewController.swift in Sources */,
+				3B202A5E27FEC22800A58166 /* HistoryViewController.swift in Sources */,
+				3B202A6027FEC26500A58166 /* StartBreathingViewController.swift in Sources */,
+				3B202A5C27FEC20900A58166 /* HomeViewController.swift in Sources */,
+				3B202A5827FEC1D400A58166 /* AllowNotificationViewController.swift in Sources */,
 				3B202A3027FEA45200A58166 /* AppDelegate.swift in Sources */,
 				3B202A3227FEA45200A58166 /* SceneDelegate.swift in Sources */,
+				3B202A6227FEC29600A58166 /* BreathingSessionViewController.swift in Sources */,
+				3B202A5A27FEC1F400A58166 /* SetUpCompleteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
