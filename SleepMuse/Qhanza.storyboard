@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="StartBreathingViewController" customModule="SleepMuse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,16 +43,6 @@ to help you sleep!</string>
                                 <color key="textColor" name="SleepMuse Gradient Text Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MJP-R2-yBF">
-                                <rect key="frame" x="0.0" y="-1" width="39" height="845"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6yd-21-mK8">
-                                <rect key="frame" x="351" y="-1" width="39" height="845"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Turn off music after:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qa-jA-qlZ">
                                 <rect key="frame" x="39" y="349" width="166" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -62,12 +52,10 @@ to help you sleep!</string>
                             </label>
                             <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2NK-bU-p75">
                                 <rect key="frame" x="35" y="240" width="320" height="100"/>
-                                <color key="backgroundColor" name="SleepMuse Gradient Text Color"/>
                                 <color key="tintColor" name="SleepMuse Gradient Text Color"/>
                             </pickerView>
                             <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="3Vc-3v-lkW">
                                 <rect key="frame" x="35" y="382" width="320" height="123"/>
-                                <color key="backgroundColor" name="SleepMuse Gradient Text Color"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vm6-I7-4ST">
                                 <rect key="frame" x="39" y="549" width="312" height="50"/>
@@ -79,19 +67,9 @@ to help you sleep!</string>
                                     <color key="baseBackgroundColor" name="SleepMuse Gradient Text Color"/>
                                 </buttonConfiguration>
                             </button>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" itemPositioning="fill" translatesAutoresizingMaskIntoConstraints="NO" id="6sR-7F-s7J">
-                                <rect key="frame" x="0.0" y="795" width="390" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem title="Home" image="house.fill" catalog="system" selectedImage="house.fill" id="wz4-a5-RlX"/>
-                                    <tabBarItem title="Breathe" image="powersleep" catalog="system" selectedImage="powersleep" id="Oe0-ak-H1c"/>
-                                </items>
-                                <color key="barTintColor" red="0.1176470518" green="0.1176470518" blue="0.14901961389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="SleepMuse Primary Color"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="aL1-Mq-0hu" secondAttribute="bottom" id="BZw-FP-Rff"/>
                             <constraint firstItem="aL1-Mq-0hu" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="NN5-Al-xwQ"/>
@@ -101,26 +79,197 @@ to help you sleep!</string>
                             <constraint firstItem="3Vc-3v-lkW" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qCO-np-YWN"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="2bV-zS-GT0">
+                        <imageReference key="image" image="powersleep" catalog="system" symbolScale="default"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="33.846153846153847" y="83.175355450236964"/>
         </scene>
+        <!--Breathing Session View Controller-->
+        <scene sceneID="ac9-cV-YBg">
+            <objects>
+                <viewController id="cWQ-4D-OHv" customClass="BreathingSessionViewController" customModule="SleepMuse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8n7-V3-t5c">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ogD-xC-Y2i">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Breathe In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sa1-Jx-Q36">
+                                <rect key="frame" x="44" y="183" width="307" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8fH-Rk-Ydb">
+                                <rect key="frame" x="57" y="660" width="275" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFf-3C-Kyw">
+                                <rect key="frame" x="39" y="625" width="57" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jB-bW-F77">
+                                <rect key="frame" x="295" y="625" width="57" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YMN-0e-dj0">
+                                <rect key="frame" x="39" y="726" width="312" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="-15" translatesAutoresizingMaskIntoConstraints="NO" id="b6v-wI-9gu">
+                                <rect key="frame" x="42" y="734" width="304" height="55"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acC-NY-Pc1">
+                                        <rect key="frame" x="0.0" y="0.0" width="111.33333333333333" height="55"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="Mute Music" imagePadding="10" titleAlignment="automatic">
+                                            <imageReference key="image" image="music.note" catalog="system" symbolScale="large"/>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                            <color key="baseForegroundColor" name="SleepMuse Primary Text Color"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQq-3O-hd4">
+                                        <rect key="frame" x="96.333333333333343" y="0.0" width="111.33333333333334" height="55"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="Pause" imagePadding="10">
+                                            <imageReference key="image" image="pause.fill" catalog="system" symbolScale="large"/>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                            <color key="baseForegroundColor" name="SleepMuse Primary Text Color"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tx8-U5-clL">
+                                        <rect key="frame" x="192.66666666666666" y="0.0" width="111.33333333333334" height="55"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" imagePlacement="top" title="Mute Instructor" imagePadding="10">
+                                            <imageReference key="image" image="person.wave.2.fill" catalog="system" symbolScale="large"/>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                                            <color key="baseForegroundColor" name="SleepMuse Primary Text Color"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ZQq-3O-hd4" firstAttribute="centerX" secondItem="b6v-wI-9gu" secondAttribute="centerX" id="bP5-56-6sp"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c46-Sf-Fe9">
+                                <rect key="frame" x="44" y="272.35639212006458" width="302" height="301.99999999999994"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lh3-o1-cIE">
+                                <rect key="frame" x="39" y="56" width="28" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="xmark" catalog="system" symbolScale="large"/>
+                                    <color key="baseForegroundColor" name="SleepMuse Primary Text Color"/>
+                                </buttonConfiguration>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CAS-NP-YiZ">
+                                <rect key="frame" x="81" y="310" width="227" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pmP-Bn-eTA"/>
+                        <color key="backgroundColor" name="SleepMuse Primary Color"/>
+                        <constraints>
+                            <constraint firstItem="ogD-xC-Y2i" firstAttribute="top" secondItem="8n7-V3-t5c" secondAttribute="top" id="GS3-Uv-KY4"/>
+                            <constraint firstItem="ogD-xC-Y2i" firstAttribute="leading" secondItem="8n7-V3-t5c" secondAttribute="leading" id="GSQ-c4-mIh"/>
+                            <constraint firstAttribute="bottom" secondItem="ogD-xC-Y2i" secondAttribute="bottom" id="XhO-zy-zFY"/>
+                            <constraint firstItem="ogD-xC-Y2i" firstAttribute="top" secondItem="8n7-V3-t5c" secondAttribute="top" id="cUG-he-mye"/>
+                            <constraint firstAttribute="trailing" secondItem="ogD-xC-Y2i" secondAttribute="trailing" id="fTj-R6-h0o"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XVT-yA-ub6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="721.53846153846155" y="82.464454976303315"/>
+        </scene>
+        <!--Breathing Session Done View Controller-->
+        <scene sceneID="adM-tL-3cY">
+            <objects>
+                <viewController id="hrw-q4-AMc" customClass="BreathingSessionDoneViewController" customModule="SleepMuse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="42y-ey-Gs6">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vux-Wp-szv">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzu-rU-t7M">
+                                <rect key="frame" x="39" y="56" width="28" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="xmark" catalog="system" symbolScale="large"/>
+                                    <color key="baseForegroundColor" name="SleepMuse Primary Text Color"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We hope you have a good night's sleep." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLf-IH-YY9">
+                                <rect key="frame" x="110" y="319" width="170" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Well Done!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJw-3T-EBu">
+                                <rect key="frame" x="41" y="269" width="307" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ITV-q9-wVQ">
+                                <rect key="frame" x="120" y="439.66666666666652" width="150" height="150.00000000000003"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" name="SleepMuse Primary Text Color"/>
+                                <imageReference key="image" image="powersleep" catalog="system" symbolScale="default"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ldx-Pq-rfb"/>
+                        <color key="backgroundColor" name="SleepMuse Primary Color"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="vux-Wp-szv" secondAttribute="bottom" id="2II-CM-m2t"/>
+                            <constraint firstItem="vux-Wp-szv" firstAttribute="top" secondItem="42y-ey-Gs6" secondAttribute="top" id="35K-vC-asQ"/>
+                            <constraint firstItem="vux-Wp-szv" firstAttribute="top" secondItem="42y-ey-Gs6" secondAttribute="top" id="5GB-et-ZOa"/>
+                            <constraint firstItem="vux-Wp-szv" firstAttribute="leading" secondItem="Ldx-Pq-rfb" secondAttribute="leading" id="5Yh-ee-PdP"/>
+                            <constraint firstAttribute="bottom" secondItem="vux-Wp-szv" secondAttribute="bottom" id="6qs-mK-zuF"/>
+                            <constraint firstItem="vux-Wp-szv" firstAttribute="leading" secondItem="42y-ey-Gs6" secondAttribute="leading" id="GmD-KY-Hqq"/>
+                            <constraint firstItem="vux-Wp-szv" firstAttribute="trailing" secondItem="Ldx-Pq-rfb" secondAttribute="trailing" id="vlt-MK-Kdw"/>
+                            <constraint firstAttribute="trailing" secondItem="vux-Wp-szv" secondAttribute="trailing" id="w0H-BF-acK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ft1-iZ-SpS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1421.5384615384614" y="81.753554502369667"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="music.note" catalog="system" width="97" height="128"/>
+        <image name="pause.fill" catalog="system" width="116" height="128"/>
+        <image name="person.wave.2.fill" catalog="system" width="128" height="118"/>
         <image name="powersleep" catalog="system" width="128" height="128"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="SleepMuse Gradient Text Color">
             <color red="0.96862745098039216" green="0.96078431372549022" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SleepMuse Primary Color">
             <color red="0.24313725490196078" green="0.22352941176470589" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="SleepMuse Primary Text Color">
+            <color red="0.94901960784313721" green="0.89803921568627454" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
