@@ -27,6 +27,8 @@
 		3B202A6027FEC26500A58166 /* StartBreathingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A5F27FEC26500A58166 /* StartBreathingViewController.swift */; };
 		3B202A6227FEC29600A58166 /* BreathingSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A6127FEC29600A58166 /* BreathingSessionViewController.swift */; };
 		3B202A6427FEC2B900A58166 /* BreathingSessionDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A6327FEC2B900A58166 /* BreathingSessionDoneViewController.swift */; };
+		3BFB776C27FFE3E40062B58B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3BFB776B27FFE3E40062B58B /* Settings.bundle */; };
+		3BFB776E27FFE6BF0062B58B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB776D27FFE6BF0062B58B /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		3B202A5F27FEC26500A58166 /* StartBreathingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartBreathingViewController.swift; sourceTree = "<group>"; };
 		3B202A6127FEC29600A58166 /* BreathingSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingSessionViewController.swift; sourceTree = "<group>"; };
 		3B202A6327FEC2B900A58166 /* BreathingSessionDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingSessionDoneViewController.swift; sourceTree = "<group>"; };
+		3BFB776B27FFE3E40062B58B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		3BFB776D27FFE6BF0062B58B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 				3B202A5F27FEC26500A58166 /* StartBreathingViewController.swift */,
 				3B202A6127FEC29600A58166 /* BreathingSessionViewController.swift */,
 				3B202A6327FEC2B900A58166 /* BreathingSessionDoneViewController.swift */,
+				3BFB776D27FFE6BF0062B58B /* Constants.swift */,
 				3B202A3B27FEA45300A58166 /* Assets.xcassets */,
 				3B202A3527FEA45200A58166 /* Main.storyboard */,
 				3B202A3D27FEA45300A58166 /* LaunchScreen.storyboard */,
@@ -105,6 +110,7 @@
 				3B202A4F27FEC06400A58166 /* Jesi.storyboard */,
 				3B202A4027FEA45300A58166 /* Info.plist */,
 				3B202A3827FEA45200A58166 /* SleepMuse.xcdatamodeld */,
+				3BFB776B27FFE3E40062B58B /* Settings.bundle */,
 			);
 			path = SleepMuse;
 			sourceTree = "<group>";
@@ -173,6 +179,7 @@
 				3B202A3C27FEA45300A58166 /* Assets.xcassets in Resources */,
 				3B202A3727FEA45200A58166 /* Main.storyboard in Resources */,
 				3B202A4C27FEC04100A58166 /* Qhanza.storyboard in Resources */,
+				3BFB776C27FFE3E40062B58B /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +195,7 @@
 				3B202A5627FEC18700A58166 /* SelectBedtimeReminderViewController.swift in Sources */,
 				3B202A3427FEA45200A58166 /* ViewController.swift in Sources */,
 				3B202A3A27FEA45200A58166 /* SleepMuse.xcdatamodeld in Sources */,
+				3BFB776E27FFE6BF0062B58B /* Constants.swift in Sources */,
 				3B202A5427FEC12300A58166 /* FallAsleepDurationViewController.swift in Sources */,
 				3B202A5E27FEC22800A58166 /* HistoryViewController.swift in Sources */,
 				3B202A6027FEC26500A58166 /* StartBreathingViewController.swift in Sources */,
@@ -348,6 +356,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -375,6 +384,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -1,32 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Jesi-->
+        <scene sceneID="OLJ-AC-5Yo">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Jesi" id="991-pe-oau" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iy7-ZV-32d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1732" y="492"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SleepMuse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="SleepMuse Primary Color"/>
                     </view>
+                    <connections>
+                        <segue destination="991-pe-oau" kind="presentation" identifier="openGetStartedSegue" modalPresentationStyle="fullScreen" id="zDs-nN-86a"/>
+                        <segue destination="fl5-LI-f8J" kind="presentation" identifier="openHomeSegue" animates="NO" modalPresentationStyle="fullScreen" id="ptQ-uG-L1K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="81"/>
+            <point key="canvasLocation" x="-1731" y="-16"/>
+        </scene>
+        <!--Qhanza-->
+        <scene sceneID="WuF-kv-Uig">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Qhanza" id="ztT-gh-OGW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Breathe" image="moon.fill" catalog="system" id="JrH-ZX-AwT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3bD-LO-gfp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="259" y="492"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EL1-C2-8FY">
+            <objects>
+                <navigationController id="fl5-LI-f8J" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="b9F-yA-FCe"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I2b-RX-XBc">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jW8-2f-wc0" kind="relationship" relationship="rootViewController" id="itI-MW-1rj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NFf-85-8g7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-918" y="-16"/>
+        </scene>
+        <!--William-->
+        <scene sceneID="nhV-5B-YQ6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="William" id="lDz-gh-ftE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="1w9-NR-mal"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IiR-Jr-WDA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-185" y="492"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Smg-eQ-1m9">
+            <objects>
+                <tabBarController id="jW8-2f-wc0" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="O3S-Yq-IkP"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J5w-5T-5Kq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="SleepMuse Gradient Text Color"/>
+                        <color key="selectedImageTintColor" name="SleepMuse Primary Color"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="lDz-gh-ftE" kind="relationship" relationship="viewControllers" id="XwM-x6-J3u"/>
+                        <segue destination="ztT-gh-OGW" kind="relationship" relationship="viewControllers" id="bTH-li-FRd"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FbI-Y2-73M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15" y="-15"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="moon.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="SleepMuse Gradient Text Color">
+            <color red="0.96862745098039216" green="0.96078431372549022" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SleepMuse Primary Color">
+            <color red="0.24313725490196078" green="0.22352941176470589" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
