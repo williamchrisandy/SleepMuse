@@ -10,6 +10,10 @@ import UIKit
 
 class InsertNameViewController: UIViewController
 {
+    
+    @IBOutlet weak var insertName: UITextField!
+    @IBOutlet weak var nextButton: UILabel!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
