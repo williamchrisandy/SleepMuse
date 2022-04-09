@@ -11,8 +11,9 @@ import UIKit
 class InsertNameViewController: UIViewController
 {
     
-    @IBOutlet weak var insertName: UITextField!
-    @IBOutlet weak var nextButton: UILabel!
+  
+    @IBOutlet weak var insertNameField: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad()
     {
@@ -20,14 +21,11 @@ class InsertNameViewController: UIViewController
         // Do any additional setup after loading the view.
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        print((insertNameField.text) as Any)
+        let vc = storyboard?.instantiateViewController(withIdentifier: "other") as! FallAsleepDurationViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc,animated: true)
+        // need to add condition that textfilenya harus diisi dlu baru bisa next
     }
-    */
 }
