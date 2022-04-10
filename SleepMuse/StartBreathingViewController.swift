@@ -30,7 +30,7 @@ class StartBreathingViewController: UIViewController, UIPickerViewDataSource, UI
     
     // Array Data v2 - Based on UX and Spotify Sleep Timer
     let dataMusicTimerHour = [Int](0..<3)
-    let dataMusicTimerMin = [0, 2, 15, 30, 45]
+    let dataMusicTimerMin = [0, 15, 30, 45]
     
     // Color Constants
     let sleepmuseWhiteColor = UIColor(named: "SleepMuse Gradient Text Color")

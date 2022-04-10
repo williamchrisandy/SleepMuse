@@ -120,37 +120,36 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background Breathing Session" translatesAutoresizingMaskIntoConstraints="NO" id="ogD-xC-Y2i">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Breathe In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sa1-Jx-Q36">
-                                <rect key="frame" x="44" y="183" width="307" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breathe In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sa1-Jx-Q36">
+                                <rect key="frame" x="114.66666666666669" y="180.33333333333334" width="161" height="40.666666666666657"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <color key="textColor" name="SleepMuse Primary Text Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8fH-Rk-Ydb">
-                                <rect key="frame" x="57" y="660" width="275" height="4"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8fH-Rk-Ydb">
+                                <rect key="frame" x="57.666666666666657" y="660" width="275" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="MW8-AL-QvD"/>
+                                    <constraint firstAttribute="height" constant="4" id="Un2-DO-o0S"/>
+                                </constraints>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFf-3C-Kyw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFf-3C-Kyw">
                                 <rect key="frame" x="39" y="625" width="57" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="SleepMuse Primary Text Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="15:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jB-bW-F77">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="15:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jB-bW-F77">
                                 <rect key="frame" x="295" y="625" width="57" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="SleepMuse Primary Text Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Breathing Session Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="YMN-0e-dj0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Breathing Session Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="YMN-0e-dj0">
                                 <rect key="frame" x="39" y="726" width="312" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="-15" translatesAutoresizingMaskIntoConstraints="NO" id="b6v-wI-9gu">
-                                <rect key="frame" x="42" y="734" width="304" height="55"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-15" translatesAutoresizingMaskIntoConstraints="NO" id="b6v-wI-9gu">
+                                <rect key="frame" x="43" y="734" width="304" height="55"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acC-NY-Pc1">
                                         <rect key="frame" x="0.0" y="0.0" width="111.33333333333333" height="55"/>
@@ -180,36 +179,53 @@
                                         </buttonConfiguration>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="ZQq-3O-hd4" firstAttribute="centerX" secondItem="b6v-wI-9gu" secondAttribute="centerX" id="bP5-56-6sp"/>
-                                </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c46-Sf-Fe9">
-                                <rect key="frame" x="44" y="272.35639212006458" width="302" height="301.99999999999994"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Breathing Session Glow" translatesAutoresizingMaskIntoConstraints="NO" id="c46-Sf-Fe9">
+                                <rect key="frame" x="44" y="271" width="302" height="302"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lh3-o1-cIE">
-                                <rect key="frame" x="39" y="56" width="28" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lh3-o1-cIE">
+                                <rect key="frame" x="19.999999999999996" y="55.999999999999993" width="42.666666666666657" height="30.666666666666664"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <imageReference key="image" image="xmark" catalog="system" symbolScale="large"/>
                                     <color key="baseForegroundColor" name="SleepMuse Primary Text Color"/>
                                 </buttonConfiguration>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CAS-NP-YiZ">
-                                <rect key="frame" x="81" y="310" width="227" height="227"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bulan keju tidur" translatesAutoresizingMaskIntoConstraints="NO" id="CAS-NP-YiZ">
+                                <rect key="frame" x="82" y="309" width="226" height="226"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pmP-Bn-eTA"/>
                         <color key="backgroundColor" name="SleepMuse Primary Color"/>
                         <constraints>
+                            <constraint firstItem="c46-Sf-Fe9" firstAttribute="centerX" secondItem="8n7-V3-t5c" secondAttribute="centerX" id="1TI-5V-jXt"/>
+                            <constraint firstItem="pmP-Bn-eTA" firstAttribute="bottom" secondItem="b6v-wI-9gu" secondAttribute="bottom" constant="21" id="1qP-Yd-ZCx"/>
+                            <constraint firstItem="c46-Sf-Fe9" firstAttribute="top" secondItem="Sa1-Jx-Q36" secondAttribute="bottom" constant="50" id="33p-5M-pvy"/>
+                            <constraint firstItem="YMN-0e-dj0" firstAttribute="leading" secondItem="pmP-Bn-eTA" secondAttribute="leading" constant="39" id="4ET-1I-O83"/>
+                            <constraint firstItem="8fH-Rk-Ydb" firstAttribute="top" secondItem="0jB-bW-F77" secondAttribute="bottom" constant="15" id="4yi-XP-Tjd"/>
+                            <constraint firstItem="b6v-wI-9gu" firstAttribute="top" secondItem="8fH-Rk-Ydb" secondAttribute="bottom" constant="70" id="4zD-fB-PYt"/>
+                            <constraint firstItem="YMN-0e-dj0" firstAttribute="top" secondItem="8fH-Rk-Ydb" secondAttribute="bottom" constant="62" id="Cve-zT-cPL"/>
+                            <constraint firstItem="lh3-o1-cIE" firstAttribute="top" secondItem="pmP-Bn-eTA" secondAttribute="top" constant="12" id="E0Q-K7-5XJ"/>
                             <constraint firstItem="ogD-xC-Y2i" firstAttribute="top" secondItem="8n7-V3-t5c" secondAttribute="top" id="GS3-Uv-KY4"/>
                             <constraint firstItem="ogD-xC-Y2i" firstAttribute="leading" secondItem="8n7-V3-t5c" secondAttribute="leading" id="GSQ-c4-mIh"/>
+                            <constraint firstItem="YMN-0e-dj0" firstAttribute="centerX" secondItem="8n7-V3-t5c" secondAttribute="centerX" id="HqI-j9-9gO"/>
+                            <constraint firstItem="CAS-NP-YiZ" firstAttribute="centerY" secondItem="8n7-V3-t5c" secondAttribute="centerY" id="Hyx-QJ-Tnb"/>
+                            <constraint firstItem="MFf-3C-Kyw" firstAttribute="leading" secondItem="pmP-Bn-eTA" secondAttribute="leading" constant="39" id="Jmy-Vj-8Gc"/>
+                            <constraint firstItem="8fH-Rk-Ydb" firstAttribute="top" secondItem="MFf-3C-Kyw" secondAttribute="bottom" constant="15" id="M1n-gT-bVy"/>
+                            <constraint firstItem="pmP-Bn-eTA" firstAttribute="trailing" secondItem="YMN-0e-dj0" secondAttribute="trailing" constant="39" id="QDY-yY-2H0"/>
+                            <constraint firstItem="pmP-Bn-eTA" firstAttribute="bottom" secondItem="YMN-0e-dj0" secondAttribute="bottom" constant="14" id="Vdv-7U-n23"/>
+                            <constraint firstItem="c46-Sf-Fe9" firstAttribute="centerY" secondItem="8n7-V3-t5c" secondAttribute="centerY" id="Vzk-8b-otM"/>
                             <constraint firstAttribute="bottom" secondItem="ogD-xC-Y2i" secondAttribute="bottom" id="XhO-zy-zFY"/>
+                            <constraint firstItem="b6v-wI-9gu" firstAttribute="leading" secondItem="pmP-Bn-eTA" secondAttribute="leading" constant="43" id="Y1c-aM-jJo"/>
+                            <constraint firstItem="b6v-wI-9gu" firstAttribute="centerX" secondItem="8n7-V3-t5c" secondAttribute="centerX" id="YWa-Eh-MuX"/>
+                            <constraint firstItem="8fH-Rk-Ydb" firstAttribute="centerX" secondItem="8n7-V3-t5c" secondAttribute="centerX" id="bxz-jX-w6s"/>
+                            <constraint firstItem="lh3-o1-cIE" firstAttribute="leading" secondItem="pmP-Bn-eTA" secondAttribute="leading" constant="20" id="cQY-Rc-9iv"/>
                             <constraint firstItem="ogD-xC-Y2i" firstAttribute="top" secondItem="8n7-V3-t5c" secondAttribute="top" id="cUG-he-mye"/>
+                            <constraint firstItem="pmP-Bn-eTA" firstAttribute="trailing" secondItem="b6v-wI-9gu" secondAttribute="trailing" constant="43" id="d8H-6p-Ret"/>
+                            <constraint firstItem="CAS-NP-YiZ" firstAttribute="centerX" secondItem="8n7-V3-t5c" secondAttribute="centerX" id="dJs-Ee-gf9"/>
                             <constraint firstAttribute="trailing" secondItem="ogD-xC-Y2i" secondAttribute="trailing" id="fTj-R6-h0o"/>
+                            <constraint firstItem="pmP-Bn-eTA" firstAttribute="trailing" secondItem="0jB-bW-F77" secondAttribute="trailing" constant="38" id="vfV-34-kTf"/>
+                            <constraint firstItem="Sa1-Jx-Q36" firstAttribute="centerX" secondItem="8n7-V3-t5c" secondAttribute="centerX" id="wmK-Nj-WyG"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -225,12 +241,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background Breathing Session" translatesAutoresizingMaskIntoConstraints="NO" id="vux-Wp-szv">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background Session Done" translatesAutoresizingMaskIntoConstraints="NO" id="vux-Wp-szv">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzu-rU-t7M">
-                                <rect key="frame" x="39" y="56" width="28" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzu-rU-t7M">
+                                <rect key="frame" x="19.999999999999996" y="55.999999999999993" width="42.666666666666657" height="30.666666666666664"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <imageReference key="image" image="xmark" catalog="system" symbolScale="large"/>
@@ -251,12 +266,6 @@
                                 <color key="textColor" name="SleepMuse Primary Text Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ITV-q9-wVQ">
-                                <rect key="frame" x="120" y="439.66666666666652" width="150" height="150.00000000000003"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" name="SleepMuse Primary Text Color"/>
-                                <imageReference key="image" image="powersleep" catalog="system" symbolScale="default"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ldx-Pq-rfb"/>
                         <color key="backgroundColor" name="SleepMuse Primary Color"/>
@@ -267,8 +276,10 @@
                             <constraint firstItem="vux-Wp-szv" firstAttribute="leading" secondItem="Ldx-Pq-rfb" secondAttribute="leading" id="5Yh-ee-PdP"/>
                             <constraint firstAttribute="bottom" secondItem="vux-Wp-szv" secondAttribute="bottom" id="6qs-mK-zuF"/>
                             <constraint firstItem="vux-Wp-szv" firstAttribute="leading" secondItem="42y-ey-Gs6" secondAttribute="leading" id="GmD-KY-Hqq"/>
+                            <constraint firstItem="Nzu-rU-t7M" firstAttribute="leading" secondItem="Ldx-Pq-rfb" secondAttribute="leading" constant="20" id="acU-Bt-xrL"/>
                             <constraint firstItem="vux-Wp-szv" firstAttribute="trailing" secondItem="Ldx-Pq-rfb" secondAttribute="trailing" id="vlt-MK-Kdw"/>
                             <constraint firstAttribute="trailing" secondItem="vux-Wp-szv" secondAttribute="trailing" id="w0H-BF-acK"/>
+                            <constraint firstItem="Nzu-rU-t7M" firstAttribute="top" secondItem="Ldx-Pq-rfb" secondAttribute="top" constant="12" id="y8p-45-bai"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -279,14 +290,16 @@
     </scenes>
     <resources>
         <image name="Background Breathing Session" width="390" height="844"/>
+        <image name="Background Session Done" width="390" height="844"/>
+        <image name="Breathing Session Glow" width="302" height="302"/>
         <image name="Breathing Session Rectangle" width="312" height="70"/>
         <image name="Rectangle" width="324" height="104"/>
         <image name="Rectangle Copy" width="316" height="127"/>
+        <image name="bulan keju tidur" width="226" height="226"/>
         <image name="moon.zzz.fill" catalog="system" width="115" height="128"/>
         <image name="music.note" catalog="system" width="97" height="128"/>
         <image name="pause.fill" catalog="system" width="116" height="128"/>
         <image name="person.wave.2.fill" catalog="system" width="128" height="118"/>
-        <image name="powersleep" catalog="system" width="128" height="128"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="SleepMuse Gradient Text Color">
             <color red="0.96862745098039216" green="0.96078431372549022" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
