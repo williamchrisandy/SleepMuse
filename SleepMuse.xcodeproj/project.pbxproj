@@ -29,6 +29,7 @@
 		3B202A6427FEC2B900A58166 /* BreathingSessionDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A6327FEC2B900A58166 /* BreathingSessionDoneViewController.swift */; };
 		3BFB776C27FFE3E40062B58B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3BFB776B27FFE3E40062B58B /* Settings.bundle */; };
 		3BFB776E27FFE6BF0062B58B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB776D27FFE6BF0062B58B /* Constants.swift */; };
+		3BFB7770280288260062B58B /* Pink Noises in Resources */ = {isa = PBXBuildFile; fileRef = 3BFB776F280288260062B58B /* Pink Noises */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		3B202A6327FEC2B900A58166 /* BreathingSessionDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingSessionDoneViewController.swift; sourceTree = "<group>"; };
 		3BFB776B27FFE3E40062B58B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		3BFB776D27FFE6BF0062B58B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3BFB776F280288260062B58B /* Pink Noises */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Pink Noises"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				3B202A4F27FEC06400A58166 /* Jesi.storyboard */,
 				3B202A4027FEA45300A58166 /* Info.plist */,
 				3B202A3827FEA45200A58166 /* SleepMuse.xcdatamodeld */,
+				3BFB776F280288260062B58B /* Pink Noises */,
 				3BFB776B27FFE3E40062B58B /* Settings.bundle */,
 			);
 			path = SleepMuse;
@@ -179,6 +182,7 @@
 				3B202A3C27FEA45300A58166 /* Assets.xcassets in Resources */,
 				3B202A3727FEA45200A58166 /* Main.storyboard in Resources */,
 				3B202A4C27FEC04100A58166 /* Qhanza.storyboard in Resources */,
+				3BFB7770280288260062B58B /* Pink Noises in Resources */,
 				3BFB776C27FFE3E40062B58B /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
