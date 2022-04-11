@@ -20,9 +20,7 @@
 		3B202A5227FEC09F00A58166 /* InsertNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A5127FEC09F00A58166 /* InsertNameViewController.swift */; };
 		3B202A5427FEC12300A58166 /* FallAsleepDurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A5327FEC12300A58166 /* FallAsleepDurationViewController.swift */; };
 		3B202A5627FEC18700A58166 /* SelectBedtimeReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A5527FEC18700A58166 /* SelectBedtimeReminderViewController.swift */; };
-		3B202A5827FEC1D400A58166 /* AllowNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A5727FEC1D400A58166 /* AllowNotificationViewController.swift */; };
 		3B202A5A27FEC1F400A58166 /* SetUpCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A5927FEC1F400A58166 /* SetUpCompleteViewController.swift */; };
-		3B202A5C27FEC20900A58166 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A5B27FEC20900A58166 /* HomeViewController.swift */; };
 		3B202A5E27FEC22800A58166 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A5D27FEC22800A58166 /* HistoryViewController.swift */; };
 		3B202A6027FEC26500A58166 /* StartBreathingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A5F27FEC26500A58166 /* StartBreathingViewController.swift */; };
 		3B202A6227FEC29600A58166 /* BreathingSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A6127FEC29600A58166 /* BreathingSessionViewController.swift */; };
@@ -48,9 +46,7 @@
 		3B202A5127FEC09F00A58166 /* InsertNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertNameViewController.swift; sourceTree = "<group>"; };
 		3B202A5327FEC12300A58166 /* FallAsleepDurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FallAsleepDurationViewController.swift; sourceTree = "<group>"; };
 		3B202A5527FEC18700A58166 /* SelectBedtimeReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBedtimeReminderViewController.swift; sourceTree = "<group>"; };
-		3B202A5727FEC1D400A58166 /* AllowNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowNotificationViewController.swift; sourceTree = "<group>"; };
 		3B202A5927FEC1F400A58166 /* SetUpCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpCompleteViewController.swift; sourceTree = "<group>"; };
-		3B202A5B27FEC20900A58166 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3B202A5D27FEC22800A58166 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		3B202A5F27FEC26500A58166 /* StartBreathingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartBreathingViewController.swift; sourceTree = "<group>"; };
 		3B202A6127FEC29600A58166 /* BreathingSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingSessionViewController.swift; sourceTree = "<group>"; };
@@ -96,9 +92,7 @@
 				3B202A5127FEC09F00A58166 /* InsertNameViewController.swift */,
 				3B202A5327FEC12300A58166 /* FallAsleepDurationViewController.swift */,
 				3B202A5527FEC18700A58166 /* SelectBedtimeReminderViewController.swift */,
-				3B202A5727FEC1D400A58166 /* AllowNotificationViewController.swift */,
 				3B202A5927FEC1F400A58166 /* SetUpCompleteViewController.swift */,
-				3B202A5B27FEC20900A58166 /* HomeViewController.swift */,
 				3B202A5D27FEC22800A58166 /* HistoryViewController.swift */,
 				3B202A5F27FEC26500A58166 /* StartBreathingViewController.swift */,
 				3B202A6127FEC29600A58166 /* BreathingSessionViewController.swift */,
@@ -203,8 +197,6 @@
 				3B202A5427FEC12300A58166 /* FallAsleepDurationViewController.swift in Sources */,
 				3B202A5E27FEC22800A58166 /* HistoryViewController.swift in Sources */,
 				3B202A6027FEC26500A58166 /* StartBreathingViewController.swift in Sources */,
-				3B202A5C27FEC20900A58166 /* HomeViewController.swift in Sources */,
-				3B202A5827FEC1D400A58166 /* AllowNotificationViewController.swift in Sources */,
 				3B202A3027FEA45200A58166 /* AppDelegate.swift in Sources */,
 				3B202A3227FEA45200A58166 /* SceneDelegate.swift in Sources */,
 				3B202A6227FEC29600A58166 /* BreathingSessionViewController.swift in Sources */,
