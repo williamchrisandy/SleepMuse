@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9nd-fe-nOP">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -57,17 +57,18 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="9q4-Lx-2TW"/>
                     <connections>
-                        <outlet property="insertName" destination="SQU-WC-iie" id="5Ug-jA-agt"/>
                         <outlet property="insertNameField" destination="SQU-WC-iie" id="KzH-nz-hLq"/>
                         <outlet property="nextButton" destination="zRF-W9-Ewi" id="hZV-mZ-Py3"/>
+                        <segue destination="MER-RT-OyM" kind="show" identifier="nextPageFallAsleepDuration" id="rsU-oP-jlV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.46153846153846" y="83.886255924170612"/>
+            <point key="canvasLocation" x="947.69230769230762" y="83.886255924170612"/>
         </scene>
-        <!--Title-->
+        <!--Fall Asleep Duration View Controller-->
         <scene sceneID="PmL-xQ-tV2">
             <objects>
                 <viewController id="MER-RT-OyM" customClass="FallAsleepDurationViewController" customModule="SleepMuse" customModuleProvider="target" sceneMemberID="viewController">
@@ -86,7 +87,7 @@
                                 <color key="textColor" red="0.94901960780000005" green="0.8980392157" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTe-aQ-RIQ">
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="15" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTe-aQ-RIQ">
                                 <rect key="frame" x="0.0" y="327" width="390" height="134"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -107,14 +108,6 @@
                                 <color key="textColor" red="0.94901960780000005" green="0.8980392157" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQl-ko-3zF">
-                                <rect key="frame" x="23" y="48" width="15" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title="">
-                                    <color key="baseForegroundColor" red="0.94901960780000005" green="0.8980392157" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fpx-uF-gUj">
                                 <rect key="frame" x="296" y="761" width="70" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -126,33 +119,31 @@
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9eW-mX-cjy"/>
                                     <action selector="nextButtonPressed:" destination="MER-RT-OyM" eventType="touchUpInside" id="hht-R0-FEs"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51s-gx-g4Q">
-                                <rect key="frame" x="25" y="761" width="70" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Skip">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
-                                    <color key="baseForegroundColor" red="0.94901960780000005" green="0.8980392157" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="nextButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Jzl-Yv-mWc"/>
-                                    <action selector="skipButtonPressed:" destination="MER-RT-OyM" eventType="touchUpInside" id="ICj-9P-YSp"/>
+                                    <segue destination="ho7-SX-qmt" kind="show" identifier="nextPageSelectBedtime" id="dot-MT-CkB"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="66W-E4-Fvr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="bO6-CV-akM"/>
+                    <navigationItem key="navigationItem" id="bO6-CV-akM"/>
                     <connections>
                         <outlet property="fallAsleepTimePicker" destination="vTe-aQ-RIQ" id="OlF-uA-bpP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MSE-aQ-mL0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="700" y="83.886255924170612"/>
+            <point key="canvasLocation" x="1629.2307692307693" y="83.886255924170612"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="x6a-lt-XfO">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="iCT-M8-tEI" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vXK-Ct-4bu"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A3o-mk-TIJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3793" y="47"/>
         </scene>
         <!--Select Bedtime Reminder View Controller-->
         <scene sceneID="QSG-fv-C9t">
@@ -166,14 +157,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73U-OY-bML">
-                                <rect key="frame" x="23" y="48" width="15" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title="">
-                                    <color key="baseForegroundColor" red="0.94901960780000005" green="0.8980392157" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select your reminder" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePf-tP-FME">
                                 <rect key="frame" x="24" y="160" width="307" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -202,7 +185,7 @@
                                 <color key="textColor" red="0.94901960780000005" green="0.8980392157" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="VmP-jG-jPT">
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="VmP-jG-jPT">
                                 <rect key="frame" x="0.0" y="305" width="390" height="173"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </datePicker>
@@ -220,53 +203,18 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nextButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ouD-ig-CQv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEg-wa-Khc">
-                                <rect key="frame" x="25" y="761" width="70" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Skip">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
-                                    <color key="baseForegroundColor" red="0.94901960780000005" green="0.8980392157" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="nextButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yEJ-f6-J0E"/>
+                                    <segue destination="ssQ-ut-sJ8" kind="show" identifier="nextPageSetUpComplete" id="Hrr-dZ-R5H"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KXu-E6-QXY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Qkc-Us-bdy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JdI-7u-4yI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1421.5384615384614" y="83.886255924170612"/>
-        </scene>
-        <!--Allow Notification View Controller-->
-        <scene sceneID="X8g-ub-KMx">
-            <objects>
-                <viewController id="3ac-vX-lnL" customClass="AllowNotificationViewController" customModule="SleepMuse" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Np2-JB-fn2">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="8if-bO-BbQ">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="8WM-hr-k84">
-                                <rect key="frame" x="-16" y="324" width="390" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </datePicker>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="dKv-RI-k7t"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NsG-3V-LZ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2120" y="83.886255924170612"/>
+            <point key="canvasLocation" x="2350.7692307692305" y="83.886255924170612"/>
         </scene>
         <!--Set Up Complete View Controller-->
         <scene sceneID="Tgd-rj-REI">
@@ -300,6 +248,9 @@
                                     <color key="baseForegroundColor" name="SleepMuse Primary Color"/>
                                     <color key="baseBackgroundColor" red="0.94901960780000005" green="0.8980392157" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="iCT-M8-tEI" kind="show" id="QqG-zv-JtN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qme-kj-vGc"/>
@@ -308,16 +259,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Obj-Yj-YTm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2841.5384615384614" y="83.886255924170612"/>
+            <point key="canvasLocation" x="3112" y="84"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fpa-71-xSj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9nd-fe-nOP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1AX-l2-bIc">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="XCo-mq-0ZW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jr0-XL-24m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.46153846153846" y="83.886255924170612"/>
         </scene>
     </scenes>
+    <color key="tintColor" name="SleepMuse Primary Text Color"/>
     <resources>
         <image name="background" width="390" height="844"/>
         <image name="background2" width="390" height="844"/>
-        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="moonComplete" width="198" height="221"/>
         <namedColor name="SleepMuse Primary Color">
             <color red="0.24313725490196078" green="0.22352941176470589" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SleepMuse Primary Text Color">
+            <color red="0.94901960784313721" green="0.89803921568627454" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

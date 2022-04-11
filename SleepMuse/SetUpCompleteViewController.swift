@@ -13,6 +13,8 @@ class SetUpCompleteViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        UserDefaults.standard.set(true, forKey: keyFirstTime)
+        self.navigationController?.isNavigationBarHidden = true
         // Do any additional setup after loading the view.
     }
 

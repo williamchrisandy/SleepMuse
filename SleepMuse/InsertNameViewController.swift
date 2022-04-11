@@ -22,10 +22,7 @@ class InsertNameViewController: UIViewController
     }
 
     @IBAction func nextButtonPressed(_ sender: Any) {
-        print((insertNameField.text) as Any)
-        let vc = storyboard?.instantiateViewController(withIdentifier: "other") as! FallAsleepDurationViewController
-        vc.modalPresentationStyle = .fullScreen
-        present(vc,animated: true)
+performSegue(withIdentifier: "nextPageFallAsleepDuration", sender: self)
         // need to add condition that textfilenya harus diisi dlu baru bisa next
     }
 }
