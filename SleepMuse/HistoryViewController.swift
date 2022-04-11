@@ -8,11 +8,11 @@
 
 import UIKit
 
-class HistoryViewController: UIViewController
+class HistoryViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
 {
     @IBOutlet weak var viewRecent: UIView!
-    @IBOutlet weak var viewDaily: UIView!
     @IBOutlet weak var collectionViewDaily: UICollectionView!
+    @IBOutlet weak var collectionViewWeekly: UICollectionView!
     
     override func viewDidLoad()
     {
@@ -26,18 +26,20 @@ class HistoryViewController: UIViewController
         self.navigationController?.visibleViewController?.navigationItem.title = "History"
         if var titleTextAttributes = self.navigationController?.navigationBar.titleTextAttributes
         {
-            print("Test")
-            titleTextAttributes[NSAttributedString.Key.foregroundColor] = UIColor.red
+            titleTextAttributes[NSAttributedString.Key.foregroundColor] = UIColor(named: "SleepMuse Primary Text Color")!
             self.navigationController?.navigationBar.titleTextAttributes = titleTextAttributes
         }
         else
         {
-            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor(named: "SleepMuse Primary Text Color")!]
+            self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "SleepMuse Primary Text Color")!]
         }
         
         let settingsButton = UIBarButtonItem.init(image: UIImage(systemName: "gearshape.fill"), style: .done, target: self, action: #selector(self.openSetting(_:)))
         settingsButton.tintColor = UIColor.white
-        self.navigationController?.visibleViewController?.navigationItem.setRightBarButton(settingsButton, animated: false)
+        let notificationButton = UIBarButtonItem.init(image: UIImage(systemName: "gearshape"), style: .done, target: self, action: #selector(self.openSetting(_:)))
+        settingsButton.tintColor = UIColor.white
+//        self.navigationController?.visibleViewController?.navigationItem.setRightBarButton(settingsButton, animated: false)
+        self.navigationController?.visibleViewController?.navigationItem.setRightBarButtonItems([settingsButton,notificationButton], animated: false)
     }
     
     @IBAction func openSetting(_ sender: UIButton)
@@ -50,4 +52,23 @@ class HistoryViewController: UIViewController
             app.open(url, completionHandler: nil)
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+            return 3
+    }
+        
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    {
+//        collectionView == collectionViewDaily ? "collectionViewDailyCell" : "collectionViewWeeklyCell"
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionView == collectionViewDaily ? "collectionViewDailyCell" : "collectionViewWeeklyCell", for: indexPath) as! HistoryCollectionViewCell
+//        cell.imageViewDaySymbol.isHidden = true
+            return cell
+    }
+        
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        return CGSize(width: collectionView.frame.width, height: collectionView == collectionViewDaily ? 146 : 134)
+    }
+    
 }

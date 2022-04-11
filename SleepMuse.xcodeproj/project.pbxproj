@@ -25,6 +25,7 @@
 		3B202A6027FEC26500A58166 /* StartBreathingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A5F27FEC26500A58166 /* StartBreathingViewController.swift */; };
 		3B202A6227FEC29600A58166 /* BreathingSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A6127FEC29600A58166 /* BreathingSessionViewController.swift */; };
 		3B202A6427FEC2B900A58166 /* BreathingSessionDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A6327FEC2B900A58166 /* BreathingSessionDoneViewController.swift */; };
+		3B2BF99D28048809003C734B /* HistoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2BF99C28048809003C734B /* HistoryCollectionViewCell.swift */; };
 		3BFB776C27FFE3E40062B58B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3BFB776B27FFE3E40062B58B /* Settings.bundle */; };
 		3BFB776E27FFE6BF0062B58B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB776D27FFE6BF0062B58B /* Constants.swift */; };
 		3BFB7770280288260062B58B /* Pink Noises in Resources */ = {isa = PBXBuildFile; fileRef = 3BFB776F280288260062B58B /* Pink Noises */; };
@@ -51,6 +52,7 @@
 		3B202A5F27FEC26500A58166 /* StartBreathingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartBreathingViewController.swift; sourceTree = "<group>"; };
 		3B202A6127FEC29600A58166 /* BreathingSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingSessionViewController.swift; sourceTree = "<group>"; };
 		3B202A6327FEC2B900A58166 /* BreathingSessionDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingSessionDoneViewController.swift; sourceTree = "<group>"; };
+		3B2BF99C28048809003C734B /* HistoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BFB776B27FFE3E40062B58B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		3BFB776D27FFE6BF0062B58B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3BFB776F280288260062B58B /* Pink Noises */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Pink Noises"; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				3B202A5527FEC18700A58166 /* SelectBedtimeReminderViewController.swift */,
 				3B202A5927FEC1F400A58166 /* SetUpCompleteViewController.swift */,
 				3B202A5D27FEC22800A58166 /* HistoryViewController.swift */,
+				3B2BF99C28048809003C734B /* HistoryCollectionViewCell.swift */,
 				3B202A5F27FEC26500A58166 /* StartBreathingViewController.swift */,
 				3B202A6127FEC29600A58166 /* BreathingSessionViewController.swift */,
 				3B202A6327FEC2B900A58166 /* BreathingSessionDoneViewController.swift */,
@@ -197,6 +200,7 @@
 				3B202A5427FEC12300A58166 /* FallAsleepDurationViewController.swift in Sources */,
 				3B202A5E27FEC22800A58166 /* HistoryViewController.swift in Sources */,
 				3B202A6027FEC26500A58166 /* StartBreathingViewController.swift in Sources */,
+				3B2BF99D28048809003C734B /* HistoryCollectionViewCell.swift in Sources */,
 				3B202A3027FEA45200A58166 /* AppDelegate.swift in Sources */,
 				3B202A3227FEA45200A58166 /* SceneDelegate.swift in Sources */,
 				3B202A6227FEC29600A58166 /* BreathingSessionViewController.swift in Sources */,
