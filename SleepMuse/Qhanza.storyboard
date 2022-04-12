@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aL1-Mq-0hu">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background Main" translatesAutoresizingMaskIntoConstraints="NO" id="aL1-Mq-0hu">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Good Evening, Dita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eta-2u-aL3">
@@ -181,7 +181,11 @@
                                 </buttonConfiguration>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bulan keju tidur" translatesAutoresizingMaskIntoConstraints="NO" id="CAS-NP-YiZ">
-                                <rect key="frame" x="82" y="309" width="226" height="226"/>
+                                <rect key="frame" x="81.666666666666686" y="308.66666666666669" width="227" height="227.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="227" id="mZx-td-D1Q"/>
+                                    <constraint firstAttribute="height" constant="227" id="sEo-nj-yhI"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pmP-Bn-eTA"/>
@@ -234,7 +238,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background Session Done" translatesAutoresizingMaskIntoConstraints="NO" id="vux-Wp-szv">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background Breathing Session" translatesAutoresizingMaskIntoConstraints="NO" id="vux-Wp-szv">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzu-rU-t7M">
@@ -259,6 +263,13 @@
                                 <color key="textColor" name="SleepMuse Primary Text Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bulan sabit" translatesAutoresizingMaskIntoConstraints="NO" id="eAr-30-V6S">
+                                <rect key="frame" x="120" y="440" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="739-d0-Unk"/>
+                                    <constraint firstAttribute="width" constant="150" id="ekc-en-k8x"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ldx-Pq-rfb"/>
                         <color key="backgroundColor" name="SleepMuse Primary Color"/>
@@ -284,12 +295,13 @@
     </scenes>
     <resources>
         <image name="Background Breathing Session" width="390" height="844"/>
-        <image name="Background Session Done" width="390" height="844"/>
+        <image name="Background Main" width="390" height="844"/>
         <image name="Breathing Session Glow" width="302" height="302"/>
         <image name="Breathing Session Rectangle" width="312" height="70"/>
         <image name="Rectangle" width="324" height="104"/>
         <image name="Rectangle Copy" width="316" height="127"/>
-        <image name="bulan keju tidur" width="226" height="226"/>
+        <image name="bulan keju tidur" width="678" height="678"/>
+        <image name="bulan sabit" width="639" height="678"/>
         <image name="moon.zzz.fill" catalog="system" width="115" height="128"/>
         <image name="music.note" catalog="system" width="97" height="128"/>
         <image name="pause.fill" catalog="system" width="116" height="128"/>
