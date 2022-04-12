@@ -17,7 +17,7 @@ class ViewController: UIViewController
     override func viewDidAppear(_ animated: Bool)
     {
 //        Buat Qhanza: Uncomment buat nampilin TabBar. Buat Jesi: Line di bawah ini bisa dipake kalo set uo completed terakhir udah diklik ok.
-//        UserDefaults.standard.set(true, forKey: keyFirstTime)
+        UserDefaults.standard.set(true, forKey: keyFirstTime)
         
         performSegue(withIdentifier: UserDefaults.standard.bool(forKey: keyFirstTime) ? "openHomeSegue" : "openGetStartedSegue", sender: self)
     }

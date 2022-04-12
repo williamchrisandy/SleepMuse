@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -9,78 +9,438 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--History-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="HomeViewController" customModule="SleepMuse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="HistoryViewController" customModule="SleepMuse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="Good Evening" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbd-3L-rFY">
-                                <rect key="frame" x="20" y="64" width="125" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <color key="textColor" name="SleepMuse Gradient Text Color"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text=", " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEv-Im-9JF">
-                                <rect key="frame" x="145" y="64" width="10" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" name="SleepMuse Gradient Text Color"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLm-Al-T33">
-                                <rect key="frame" x="338" y="64" width="32" height="31"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background Main" translatesAutoresizingMaskIntoConstraints="NO" id="Rh2-G9-a3s">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SMW-gR-Jy9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cyP-v3-gJb">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="626"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k01-n6-vaC">
+                                                <rect key="frame" x="20" y="20" width="280" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d01-HF-T7I">
+                                                <rect key="frame" x="20" y="52" width="280" height="110"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqI-TP-4Fl">
+                                                        <rect key="frame" x="20" y="20" width="42" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nHo-0j-2pk">
+                                                        <rect key="frame" x="20" y="46" width="60.5" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Start Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxW-go-vgx">
+                                                        <rect key="frame" x="20" y="72" width="73.5" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                        <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Too Well (10 Minute Version)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dP6-VS-iHb">
+                                                        <rect key="frame" x="105.5" y="20" width="154.5" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                        <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13.13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stE-Nf-C1M">
+                                                        <rect key="frame" x="105.5" y="72" width="154.5" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                        <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1h 45m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="611-FJ-oWL">
+                                                        <rect key="frame" x="105.5" y="46" width="154.5" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                        <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" name="SleepMuse Card Background Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="611-FJ-oWL" secondAttribute="trailing" constant="20" id="COT-ig-Qr8"/>
+                                                    <constraint firstItem="stE-Nf-C1M" firstAttribute="leading" secondItem="pxW-go-vgx" secondAttribute="trailing" constant="12" id="EDH-MH-NLH"/>
+                                                    <constraint firstItem="pxW-go-vgx" firstAttribute="top" secondItem="nHo-0j-2pk" secondAttribute="bottom" constant="8" symbolic="YES" id="GrL-ly-T75"/>
+                                                    <constraint firstItem="611-FJ-oWL" firstAttribute="leading" secondItem="pxW-go-vgx" secondAttribute="trailing" constant="12" id="Lm9-jM-d7A"/>
+                                                    <constraint firstItem="EqI-TP-4Fl" firstAttribute="leading" secondItem="d01-HF-T7I" secondAttribute="leading" constant="20" id="RP2-Vd-Aod"/>
+                                                    <constraint firstItem="dP6-VS-iHb" firstAttribute="top" secondItem="d01-HF-T7I" secondAttribute="top" constant="20" id="V2t-5d-E7e"/>
+                                                    <constraint firstItem="EqI-TP-4Fl" firstAttribute="top" secondItem="d01-HF-T7I" secondAttribute="top" constant="20" id="VFy-HO-RGK"/>
+                                                    <constraint firstItem="stE-Nf-C1M" firstAttribute="top" secondItem="611-FJ-oWL" secondAttribute="bottom" constant="8" symbolic="YES" id="WiA-oH-run"/>
+                                                    <constraint firstItem="nHo-0j-2pk" firstAttribute="leading" secondItem="d01-HF-T7I" secondAttribute="leading" constant="20" id="X3a-uE-WBV"/>
+                                                    <constraint firstAttribute="trailing" secondItem="dP6-VS-iHb" secondAttribute="trailing" constant="20" id="aqT-cK-mf0"/>
+                                                    <constraint firstAttribute="bottom" secondItem="pxW-go-vgx" secondAttribute="bottom" constant="20" id="e0W-gp-YRT"/>
+                                                    <constraint firstItem="611-FJ-oWL" firstAttribute="top" secondItem="dP6-VS-iHb" secondAttribute="bottom" constant="8" symbolic="YES" id="jpH-5x-3L6"/>
+                                                    <constraint firstItem="pxW-go-vgx" firstAttribute="leading" secondItem="d01-HF-T7I" secondAttribute="leading" constant="20" id="kDe-pn-j8m"/>
+                                                    <constraint firstItem="nHo-0j-2pk" firstAttribute="top" secondItem="EqI-TP-4Fl" secondAttribute="bottom" constant="8" symbolic="YES" id="mI3-Oy-mLo"/>
+                                                    <constraint firstAttribute="trailing" secondItem="stE-Nf-C1M" secondAttribute="trailing" constant="20" id="p4V-in-Y5E"/>
+                                                    <constraint firstItem="dP6-VS-iHb" firstAttribute="leading" secondItem="pxW-go-vgx" secondAttribute="trailing" constant="12" id="wGc-iZ-yPE"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBV-SW-Dnr">
+                                                <rect key="frame" x="20" y="182" width="280" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="A1q-BT-oOa">
+                                                <rect key="frame" x="20" y="214" width="280" height="146"/>
+                                                <color key="backgroundColor" name="SleepMuse Card Background Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="146" id="jBC-vv-jFJ"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="kyj-ZK-uwL">
+                                                    <size key="itemSize" width="322" height="222"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="collectionViewDailyCell" id="TOr-IU-b5j" customClass="HistoryCollectionViewCell" customModule="SleepMuse" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="146"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="146"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="1h 45m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2r-PJ-s54">
+                                                                    <rect key="frame" x="152" y="64" width="50" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                                    <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwM-qM-UH6">
+                                                                    <rect key="frame" x="20" y="64" width="124" height="18"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="124" id="IWZ-cB-OCH"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                                    <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Frequent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBR-rP-CZe">
+                                                                    <rect key="frame" x="20" y="90" width="124" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                                    <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcT-uO-bc6">
+                                                                    <rect key="frame" x="20" y="108" width="124" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                                    <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fb0-gN-2Kq">
+                                                                    <rect key="frame" x="64" y="27.5" width="236" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                    <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0uM-Vn-Abf">
+                                                                    <rect key="frame" x="20" y="20.5" width="36" height="35"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="36" id="SyP-Ov-RRK"/>
+                                                                        <constraint firstAttribute="width" constant="36" id="vFM-1H-NQU"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.00 - 20.59" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sdi-Xj-Nrb">
+                                                                    <rect key="frame" x="152" y="99" width="148" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                                    <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Dnh-vV-UA0">
+                                                                    <rect key="frame" x="210" y="65" width="18" height="16"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="18" id="OQ1-e8-xKe"/>
+                                                                        <constraint firstAttribute="width" secondItem="Dnh-vV-UA0" secondAttribute="height" multiplier="1:1" id="Y76-dv-h5y"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwI-5V-0Cv">
+                                                                    <rect key="frame" x="228" y="64" width="72" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                                    <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </view>
+                                                        <constraints>
+                                                            <constraint firstItem="0uM-Vn-Abf" firstAttribute="leading" secondItem="TOr-IU-b5j" secondAttribute="leadingMargin" constant="12" id="0xd-Ye-HvK"/>
+                                                            <constraint firstItem="MwM-qM-UH6" firstAttribute="leading" secondItem="TOr-IU-b5j" secondAttribute="leadingMargin" constant="12" id="3lF-sK-bwQ"/>
+                                                            <constraint firstItem="Sdi-Xj-Nrb" firstAttribute="leading" secondItem="MBR-rP-CZe" secondAttribute="trailing" constant="8" symbolic="YES" id="539-0J-uyT"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="fb0-gN-2Kq" secondAttribute="trailing" constant="12" id="5Nc-z2-AcC"/>
+                                                            <constraint firstItem="mwI-5V-0Cv" firstAttribute="leading" secondItem="Dnh-vV-UA0" secondAttribute="trailing" id="AsK-A4-dYa"/>
+                                                            <constraint firstAttribute="bottomMargin" secondItem="gcT-uO-bc6" secondAttribute="bottom" constant="12" id="Ge4-Xu-9wM"/>
+                                                            <constraint firstItem="Dnh-vV-UA0" firstAttribute="top" secondItem="MwM-qM-UH6" secondAttribute="top" id="Icc-V2-Vn9"/>
+                                                            <constraint firstItem="MBR-rP-CZe" firstAttribute="top" secondItem="MwM-qM-UH6" secondAttribute="bottom" constant="8" symbolic="YES" id="MUc-aR-aqy"/>
+                                                            <constraint firstItem="MBR-rP-CZe" firstAttribute="leading" secondItem="TOr-IU-b5j" secondAttribute="leadingMargin" constant="12" id="XRt-az-FAO"/>
+                                                            <constraint firstItem="MBR-rP-CZe" firstAttribute="trailing" secondItem="MwM-qM-UH6" secondAttribute="trailing" id="YL9-Dd-6yZ"/>
+                                                            <constraint firstItem="gcT-uO-bc6" firstAttribute="top" secondItem="MBR-rP-CZe" secondAttribute="bottom" id="Yt1-F4-FD3"/>
+                                                            <constraint firstItem="gcT-uO-bc6" firstAttribute="leading" secondItem="TOr-IU-b5j" secondAttribute="leadingMargin" constant="12" id="bis-uV-FwF"/>
+                                                            <constraint firstItem="mwI-5V-0Cv" firstAttribute="top" secondItem="Dnh-vV-UA0" secondAttribute="top" id="cC9-b4-teT"/>
+                                                            <constraint firstItem="M2r-PJ-s54" firstAttribute="leading" secondItem="MwM-qM-UH6" secondAttribute="trailing" constant="8" symbolic="YES" id="eFX-o6-8TI"/>
+                                                            <constraint firstItem="0uM-Vn-Abf" firstAttribute="top" secondItem="TOr-IU-b5j" secondAttribute="topMargin" constant="12" id="g1G-zE-IXl"/>
+                                                            <constraint firstItem="MwM-qM-UH6" firstAttribute="top" secondItem="0uM-Vn-Abf" secondAttribute="bottom" constant="8" symbolic="YES" id="hb0-5b-2YZ"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="Sdi-Xj-Nrb" secondAttribute="trailing" constant="12" id="mFJ-a8-bFj"/>
+                                                            <constraint firstItem="Dnh-vV-UA0" firstAttribute="leading" secondItem="M2r-PJ-s54" secondAttribute="trailing" constant="8" symbolic="YES" id="puH-2H-syA"/>
+                                                            <constraint firstItem="Sdi-Xj-Nrb" firstAttribute="centerY" secondItem="MBR-rP-CZe" secondAttribute="bottom" id="q9N-ju-vw6"/>
+                                                            <constraint firstItem="fb0-gN-2Kq" firstAttribute="centerY" secondItem="0uM-Vn-Abf" secondAttribute="centerYWithinMargins" id="r8K-mh-67a"/>
+                                                            <constraint firstItem="MBR-rP-CZe" firstAttribute="trailing" secondItem="gcT-uO-bc6" secondAttribute="trailing" id="tV0-bi-PAE"/>
+                                                            <constraint firstItem="fb0-gN-2Kq" firstAttribute="leading" secondItem="0uM-Vn-Abf" secondAttribute="trailing" constant="8" symbolic="YES" id="wM0-hj-91Y"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="mwI-5V-0Cv" secondAttribute="trailing" constant="12" id="wVI-qr-cuD"/>
+                                                            <constraint firstItem="M2r-PJ-s54" firstAttribute="top" secondItem="MwM-qM-UH6" secondAttribute="top" id="yJE-hS-4Oe"/>
+                                                        </constraints>
+                                                        <size key="customSize" width="320" height="146"/>
+                                                        <connections>
+                                                            <outlet property="imageViewDaySymbol" destination="0uM-Vn-Abf" id="ULs-0o-85y"/>
+                                                            <outlet property="imageViewUpDown" destination="Dnh-vV-UA0" id="ZAc-WJ-Nzg"/>
+                                                            <outlet property="labelAverageDuration" destination="M2r-PJ-s54" id="wrL-pK-EZz"/>
+                                                            <outlet property="labelAverageStartTime" destination="Sdi-Xj-Nrb" id="o8E-bb-zCp"/>
+                                                            <outlet property="labelChanges" destination="mwI-5V-0Cv" id="EZK-O7-wuZ"/>
+                                                            <outlet property="labelTitle" destination="fb0-gN-2Kq" id="axX-JG-ezw"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="mPz-AA-rqO"/>
+                                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="c2C-Ia-Gan"/>
+                                                </connections>
+                                            </collectionView>
+                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fvf-Jm-lNn">
+                                                <rect key="frame" x="20" y="368" width="280" height="26"/>
+                                                <connections>
+                                                    <action selector="pageControlValueChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="wmY-Yp-vn1"/>
+                                                </connections>
+                                            </pageControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekly Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UM2-Cg-72v">
+                                                <rect key="frame" x="20" y="414" width="280" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="86H-gT-wjf">
+                                                <rect key="frame" x="20" y="446" width="280" height="146"/>
+                                                <color key="backgroundColor" name="SleepMuse Card Background Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="146" id="Uj1-FS-cLr"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="zPm-YW-A6A">
+                                                    <size key="itemSize" width="322" height="222"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="collectionViewWeeklyCell" id="DUv-9k-wRN" customClass="HistoryCollectionViewCell" customModule="SleepMuse" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="6" width="320" height="134"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="134"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="1h 45m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOn-Mf-OGk">
+                                                                    <rect key="frame" x="152" y="52.5" width="50" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                                    <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Average Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTv-yF-jAD">
+                                                                    <rect key="frame" x="20" y="52.5" width="124" height="18"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="124" id="dFx-zd-eLd"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                                    <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Frequent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mm-D8-rCA">
+                                                                    <rect key="frame" x="20" y="78.5" width="124" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                                    <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Start Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdT-rK-Xts">
+                                                                    <rect key="frame" x="20" y="96.5" width="124" height="17.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                                    <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="November 12 - November 19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Yp-5E-dzf">
+                                                                    <rect key="frame" x="20" y="20" width="280" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                    <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.00 - 20.59" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sU2-3F-vlE">
+                                                                    <rect key="frame" x="152" y="87.5" width="148" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                                    <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jBq-wA-CYs">
+                                                                    <rect key="frame" x="210" y="53.5" width="18" height="16"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="jBq-wA-CYs" secondAttribute="height" multiplier="1:1" id="FEf-yf-EaP"/>
+                                                                        <constraint firstAttribute="height" constant="18" id="KJs-DS-VRL"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTy-Ka-EDh">
+                                                                    <rect key="frame" x="228" y="52.5" width="72" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                                    <color key="textColor" name="SleepMuse Primary Text Color"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </view>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottomMargin" secondItem="mdT-rK-Xts" secondAttribute="bottom" constant="12" id="0Qd-kJ-Urm"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="3Yp-5E-dzf" secondAttribute="trailing" constant="12" id="2Ba-RI-dqR"/>
+                                                            <constraint firstItem="1Mm-D8-rCA" firstAttribute="trailing" secondItem="mdT-rK-Xts" secondAttribute="trailing" id="3qD-nm-dhA"/>
+                                                            <constraint firstItem="jBq-wA-CYs" firstAttribute="top" secondItem="kTv-yF-jAD" secondAttribute="top" id="APH-ed-ztD"/>
+                                                            <constraint firstItem="sU2-3F-vlE" firstAttribute="leading" secondItem="1Mm-D8-rCA" secondAttribute="trailing" constant="8" symbolic="YES" id="BDq-EQ-QPw"/>
+                                                            <constraint firstItem="1Mm-D8-rCA" firstAttribute="trailing" secondItem="kTv-yF-jAD" secondAttribute="trailing" id="EMK-2V-6yf"/>
+                                                            <constraint firstItem="3Yp-5E-dzf" firstAttribute="leading" secondItem="DUv-9k-wRN" secondAttribute="leadingMargin" constant="12" id="IzJ-iZ-VId"/>
+                                                            <constraint firstItem="aTy-Ka-EDh" firstAttribute="top" secondItem="jBq-wA-CYs" secondAttribute="top" id="KIg-LG-UmI"/>
+                                                            <constraint firstItem="mdT-rK-Xts" firstAttribute="top" secondItem="1Mm-D8-rCA" secondAttribute="bottom" id="LmD-Ls-fyf"/>
+                                                            <constraint firstItem="kTv-yF-jAD" firstAttribute="leading" secondItem="DUv-9k-wRN" secondAttribute="leadingMargin" constant="12" id="Pja-iU-6aE"/>
+                                                            <constraint firstItem="kTv-yF-jAD" firstAttribute="top" secondItem="3Yp-5E-dzf" secondAttribute="bottom" constant="12" id="TAh-CD-BW4"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="sU2-3F-vlE" secondAttribute="trailing" constant="12" id="THt-pZ-vZm"/>
+                                                            <constraint firstItem="iOn-Mf-OGk" firstAttribute="top" secondItem="kTv-yF-jAD" secondAttribute="top" id="VSl-K3-zKE"/>
+                                                            <constraint firstItem="jBq-wA-CYs" firstAttribute="leading" secondItem="iOn-Mf-OGk" secondAttribute="trailing" constant="8" symbolic="YES" id="bP4-La-Uuz"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="aTy-Ka-EDh" secondAttribute="trailing" constant="12" id="dtD-KA-lhp"/>
+                                                            <constraint firstItem="iOn-Mf-OGk" firstAttribute="leading" secondItem="kTv-yF-jAD" secondAttribute="trailing" constant="8" symbolic="YES" id="eLf-rP-0p0"/>
+                                                            <constraint firstItem="3Yp-5E-dzf" firstAttribute="top" secondItem="DUv-9k-wRN" secondAttribute="topMargin" constant="12" id="gL3-yf-yPV"/>
+                                                            <constraint firstItem="mdT-rK-Xts" firstAttribute="leading" secondItem="DUv-9k-wRN" secondAttribute="leadingMargin" constant="12" id="iMn-w0-yxY"/>
+                                                            <constraint firstItem="1Mm-D8-rCA" firstAttribute="leading" secondItem="DUv-9k-wRN" secondAttribute="leadingMargin" constant="12" id="jdc-QA-Trd"/>
+                                                            <constraint firstItem="sU2-3F-vlE" firstAttribute="centerY" secondItem="1Mm-D8-rCA" secondAttribute="bottom" id="k74-1u-HQ2"/>
+                                                            <constraint firstItem="aTy-Ka-EDh" firstAttribute="leading" secondItem="jBq-wA-CYs" secondAttribute="trailing" id="nIq-AH-OcU"/>
+                                                            <constraint firstItem="1Mm-D8-rCA" firstAttribute="top" secondItem="kTv-yF-jAD" secondAttribute="bottom" constant="8" symbolic="YES" id="wl3-9j-YWa"/>
+                                                        </constraints>
+                                                        <size key="customSize" width="320" height="134"/>
+                                                        <connections>
+                                                            <outlet property="imageViewUpDown" destination="jBq-wA-CYs" id="jFI-LD-m4H"/>
+                                                            <outlet property="labelAverageDuration" destination="iOn-Mf-OGk" id="9UA-5Y-5xz"/>
+                                                            <outlet property="labelAverageStartTime" destination="sU2-3F-vlE" id="b2P-14-Bhn"/>
+                                                            <outlet property="labelChanges" destination="aTy-Ka-EDh" id="ybz-yx-rWc"/>
+                                                            <outlet property="labelTitle" destination="3Yp-5E-dzf" id="Ki4-Vq-I52"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="00t-Xp-GF9"/>
+                                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="QUH-4v-tvf"/>
+                                                </connections>
+                                            </collectionView>
+                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="jGN-cL-TTb">
+                                                <rect key="frame" x="20" y="600" width="280" height="26"/>
+                                                <connections>
+                                                    <action selector="pageControlValueChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="813-5d-Ujc"/>
+                                                </connections>
+                                            </pageControl>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="A1q-BT-oOa" firstAttribute="top" secondItem="oBV-SW-Dnr" secondAttribute="bottom" constant="8" symbolic="YES" id="1Si-UK-GEY"/>
+                                            <constraint firstItem="oBV-SW-Dnr" firstAttribute="leading" secondItem="cyP-v3-gJb" secondAttribute="leading" constant="20" id="2JV-Gn-Eou"/>
+                                            <constraint firstAttribute="trailing" secondItem="k01-n6-vaC" secondAttribute="trailing" constant="20" id="3Ny-T8-FbS"/>
+                                            <constraint firstAttribute="trailing" secondItem="jGN-cL-TTb" secondAttribute="trailing" constant="20" id="3fZ-WJ-NhT"/>
+                                            <constraint firstAttribute="trailing" secondItem="UM2-Cg-72v" secondAttribute="trailing" constant="20" id="5Ra-h8-Y0f"/>
+                                            <constraint firstItem="86H-gT-wjf" firstAttribute="top" secondItem="UM2-Cg-72v" secondAttribute="bottom" constant="8" symbolic="YES" id="8vc-Yx-c0F"/>
+                                            <constraint firstItem="k01-n6-vaC" firstAttribute="top" secondItem="cyP-v3-gJb" secondAttribute="top" constant="20" id="9yp-Re-cfM"/>
+                                            <constraint firstItem="UM2-Cg-72v" firstAttribute="leading" secondItem="cyP-v3-gJb" secondAttribute="leading" constant="20" id="BhN-dc-gRS"/>
+                                            <constraint firstItem="A1q-BT-oOa" firstAttribute="leading" secondItem="cyP-v3-gJb" secondAttribute="leading" constant="20" id="DT2-U7-BjK"/>
+                                            <constraint firstItem="jGN-cL-TTb" firstAttribute="top" secondItem="86H-gT-wjf" secondAttribute="bottom" constant="8" symbolic="YES" id="Jat-ks-NfF"/>
+                                            <constraint firstItem="86H-gT-wjf" firstAttribute="leading" secondItem="cyP-v3-gJb" secondAttribute="leading" constant="20" id="L2X-Xf-8S4"/>
+                                            <constraint firstItem="UM2-Cg-72v" firstAttribute="top" secondItem="fvf-Jm-lNn" secondAttribute="bottom" constant="20" id="LDk-NR-sBx"/>
+                                            <constraint firstItem="k01-n6-vaC" firstAttribute="leading" secondItem="cyP-v3-gJb" secondAttribute="leading" constant="20" id="S95-vK-Lbs"/>
+                                            <constraint firstItem="d01-HF-T7I" firstAttribute="leading" secondItem="cyP-v3-gJb" secondAttribute="leading" constant="20" id="SOf-Sc-eE1"/>
+                                            <constraint firstAttribute="trailing" secondItem="oBV-SW-Dnr" secondAttribute="trailing" constant="20" id="T5m-hY-PpT"/>
+                                            <constraint firstItem="d01-HF-T7I" firstAttribute="top" secondItem="k01-n6-vaC" secondAttribute="bottom" constant="8" symbolic="YES" id="TZU-Gb-gKj"/>
+                                            <constraint firstItem="86H-gT-wjf" firstAttribute="top" secondItem="UM2-Cg-72v" secondAttribute="bottom" constant="8" symbolic="YES" id="UhU-RZ-Og2"/>
+                                            <constraint firstAttribute="trailing" secondItem="86H-gT-wjf" secondAttribute="trailing" constant="20" id="XdM-xG-KYn"/>
+                                            <constraint firstItem="fvf-Jm-lNn" firstAttribute="top" secondItem="A1q-BT-oOa" secondAttribute="bottom" constant="8" symbolic="YES" id="Z40-7a-FOy"/>
+                                            <constraint firstAttribute="trailing" secondItem="d01-HF-T7I" secondAttribute="trailing" constant="20" id="gZV-Fq-Yy0"/>
+                                            <constraint firstItem="oBV-SW-Dnr" firstAttribute="top" secondItem="d01-HF-T7I" secondAttribute="bottom" constant="20" id="gd9-ES-vYO"/>
+                                            <constraint firstAttribute="trailing" secondItem="fvf-Jm-lNn" secondAttribute="trailing" constant="20" id="jCc-On-JP9"/>
+                                            <constraint firstItem="jGN-cL-TTb" firstAttribute="leading" secondItem="cyP-v3-gJb" secondAttribute="leading" constant="20" id="l2U-DD-GOD"/>
+                                            <constraint firstItem="fvf-Jm-lNn" firstAttribute="leading" secondItem="cyP-v3-gJb" secondAttribute="leading" constant="20" id="lwx-Zz-412"/>
+                                            <constraint firstAttribute="bottom" secondItem="jGN-cL-TTb" secondAttribute="bottom" id="qJZ-12-5RG"/>
+                                            <constraint firstAttribute="trailing" secondItem="A1q-BT-oOa" secondAttribute="trailing" constant="20" id="ta2-ez-TGR"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="32" id="ptn-Lp-fQ1"/>
+                                    <constraint firstItem="cyP-v3-gJb" firstAttribute="centerY" secondItem="SMW-gR-Jy9" secondAttribute="centerY" priority="250" id="6qh-Pe-8rn"/>
+                                    <constraint firstAttribute="trailing" secondItem="cyP-v3-gJb" secondAttribute="trailing" id="j4O-nW-meL"/>
+                                    <constraint firstItem="cyP-v3-gJb" firstAttribute="top" secondItem="SMW-gR-Jy9" secondAttribute="top" id="j6z-qd-E6v"/>
+                                    <constraint firstItem="cyP-v3-gJb" firstAttribute="leading" secondItem="SMW-gR-Jy9" secondAttribute="leading" id="kDu-9O-iZM"/>
+                                    <constraint firstAttribute="bottom" secondItem="cyP-v3-gJb" secondAttribute="bottom" priority="250" id="lqT-hq-z7p"/>
+                                    <constraint firstItem="cyP-v3-gJb" firstAttribute="centerX" secondItem="SMW-gR-Jy9" secondAttribute="centerX" id="pyq-Pg-Bn5"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="gearshape.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="openSetting:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="iWn-c3-PDf"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcL-28-Qec">
-                                <rect key="frame" x="155" y="64" width="175" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <color key="textColor" name="SleepMuse Gradient Text Color"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" name="SleepMuse Primary Text Color"/>
+                        <color key="backgroundColor" name="SleepMuse Primary Color"/>
                         <constraints>
-                            <constraint firstItem="WcL-28-Qec" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="1WX-eW-hl1"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="oLm-Al-T33" secondAttribute="trailing" constant="20" id="2Tc-Qh-2Tl"/>
-                            <constraint firstItem="tbd-3L-rFY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="3k3-lq-Vld"/>
-                            <constraint firstItem="oLm-Al-T33" firstAttribute="leading" secondItem="WcL-28-Qec" secondAttribute="trailing" constant="8" id="8l7-Hq-DOQ"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="oLm-Al-T33" secondAttribute="trailing" constant="20" id="EDD-dY-E2G"/>
-                            <constraint firstItem="oLm-Al-T33" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="QdE-QW-JNG"/>
-                            <constraint firstItem="bEv-Im-9JF" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="djo-8g-Btx"/>
-                            <constraint firstItem="bEv-Im-9JF" firstAttribute="leading" secondItem="tbd-3L-rFY" secondAttribute="trailing" id="mvn-hM-69N"/>
-                            <constraint firstItem="WcL-28-Qec" firstAttribute="leading" secondItem="bEv-Im-9JF" secondAttribute="trailing" id="sv1-ee-Hg2"/>
-                            <constraint firstItem="tbd-3L-rFY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="zer-DX-0BH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="SMW-gR-Jy9" secondAttribute="bottom" id="0rR-ql-3Vn"/>
+                            <constraint firstItem="Rh2-G9-a3s" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="8Uf-wX-b3E"/>
+                            <constraint firstAttribute="trailing" secondItem="Rh2-G9-a3s" secondAttribute="trailing" id="9mS-Qu-I9e"/>
+                            <constraint firstItem="SMW-gR-Jy9" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="g7b-yZ-Hjz"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="SMW-gR-Jy9" secondAttribute="trailing" id="j0n-6J-rsQ"/>
+                            <constraint firstItem="SMW-gR-Jy9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="k8L-lr-Ytk"/>
+                            <constraint firstAttribute="bottom" secondItem="Rh2-G9-a3s" secondAttribute="bottom" constant="49" id="kXq-IV-48w"/>
+                            <constraint firstItem="Rh2-G9-a3s" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="l8y-yU-eTE"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="PmT-G0-NZI">
-                        <imageReference key="image" image="house.fill" catalog="system" symbolScale="default"/>
+                    <tabBarItem key="tabBarItem" title="History" id="PmT-G0-NZI">
+                        <imageReference key="image" image="clock" catalog="system" symbolScale="default"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="labelDayStatus" destination="tbd-3L-rFY" id="4sO-GC-ies"/>
-                        <outlet property="labelNickName" destination="WcL-28-Qec" id="UjE-6S-BY5"/>
+                        <outlet property="collectionViewDaily" destination="A1q-BT-oOa" id="GQ5-E8-dIc"/>
+                        <outlet property="collectionViewWeekly" destination="86H-gT-wjf" id="dlh-Bp-eTD"/>
+                        <outlet property="pageControlDaily" destination="fvf-Jm-lNn" id="tNj-Q5-ujO"/>
+                        <outlet property="pageControlWeekly" destination="jGN-cL-TTb" id="bh0-po-aTW"/>
+                        <outlet property="viewRecent" destination="d01-HF-T7I" id="LXg-LV-59Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.75" y="80.281690140845072"/>
+            <point key="canvasLocation" x="16.875" y="79.225352112676063"/>
+        </scene>
+        <!--Jesi-->
+        <scene sceneID="DAx-Hk-8ic">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Jesi" id="psr-k7-kMZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g1n-2r-FAO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="625" y="-67"/>
         </scene>
     </scenes>
     <resources>
-        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
-        <image name="house.fill" catalog="system" width="128" height="106"/>
-        <namedColor name="SleepMuse Gradient Text Color">
-            <color red="0.96862745098039216" green="0.96078431372549022" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="Background Main" width="390" height="844"/>
+        <image name="arrow.up" catalog="system" width="120" height="128"/>
+        <image name="circle" catalog="system" width="128" height="121"/>
+        <image name="clock" catalog="system" width="128" height="121"/>
+        <namedColor name="SleepMuse Card Background Color">
+            <color red="1" green="1" blue="1" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SleepMuse Primary Color">
+            <color red="0.24313725490196078" green="0.22352941176470589" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SleepMuse Primary Text Color">
             <color red="0.94901960784313721" green="0.89803921568627454" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
