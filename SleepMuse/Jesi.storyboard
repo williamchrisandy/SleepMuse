@@ -206,11 +206,84 @@
                                     <segue destination="ssQ-ut-sJ8" kind="show" identifier="nextPageSetUpComplete" id="Hrr-dZ-R5H"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJs-Ok-xs6">
+                                <rect key="frame" x="24" y="567" width="39" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="M Digit" title=""/>
+                                <connections>
+                                    <action selector="mondayButtonPressed:" destination="ho7-SX-qmt" eventType="touchUpInside" id="DQP-LK-IkS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sL-af-BpM">
+                                <rect key="frame" x="73" y="566" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="T Digit" title=""/>
+                                <connections>
+                                    <action selector="tuesdayButtonPressed:" destination="ho7-SX-qmt" eventType="touchUpInside" id="c2B-cO-Tt4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r37-rN-PLh">
+                                <rect key="frame" x="178" y="566" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="T Digit" title=""/>
+                                <connections>
+                                    <action selector="thursdayButtonPressed:" destination="ho7-SX-qmt" eventType="touchUpInside" id="CDB-I0-zQi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sf-2d-8Fw">
+                                <rect key="frame" x="229" y="566" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="F Digit" title=""/>
+                                <connections>
+                                    <action selector="fridayButtonPressed:" destination="ho7-SX-qmt" eventType="touchUpInside" id="csh-il-K9t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umA-hn-PAw">
+                                <rect key="frame" x="280" y="566" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="S Digit" title=""/>
+                                <connections>
+                                    <action selector="saturdayButtonPressed:" destination="ho7-SX-qmt" eventType="touchUpInside" id="lqV-O1-13G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfw-dc-g9z">
+                                <rect key="frame" x="331" y="566" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="S Digit" title=""/>
+                                <connections>
+                                    <action selector="sundayButtonPressed:" destination="ho7-SX-qmt" eventType="touchUpInside" id="OhK-G3-KHu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7u-NH-Gkg">
+                                <rect key="frame" x="124" y="565" width="41" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="W Digit" title=""/>
+                                <connections>
+                                    <action selector="wednesdayButtonPressed:" destination="ho7-SX-qmt" eventType="touchUpInside" id="cZ4-qV-zFp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KXu-E6-QXY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Qkc-Us-bdy"/>
+                    <connections>
+                        <outlet property="fridayButton" destination="2sf-2d-8Fw" id="Jub-Oq-vYn"/>
+                        <outlet property="mondayButton" destination="EJs-Ok-xs6" id="T22-1f-vh9"/>
+                        <outlet property="saturdayButton" destination="umA-hn-PAw" id="QUT-YX-FtP"/>
+                        <outlet property="selectReminderTimePIcker" destination="VmP-jG-jPT" id="Qf5-Ld-JfI"/>
+                        <outlet property="sundayButton" destination="Vfw-dc-g9z" id="61g-wo-Q7X"/>
+                        <outlet property="thursdayButton" destination="r37-rN-PLh" id="sR5-IG-F4K"/>
+                        <outlet property="tuesdayButton" destination="6sL-af-BpM" id="4aR-UY-oRL"/>
+                        <outlet property="wednesdayButton" destination="X7u-NH-Gkg" id="jWC-3C-kdi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JdI-7u-4yI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -228,7 +301,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="moonComplete" translatesAutoresizingMaskIntoConstraints="NO" id="uHw-LF-4IN">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bulan keju hepi" translatesAutoresizingMaskIntoConstraints="NO" id="uHw-LF-4IN">
                                 <rect key="frame" x="100" y="223.33333333333331" width="196.66666666666666" height="219.33333333333331"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -282,9 +355,14 @@
     </scenes>
     <color key="tintColor" name="SleepMuse Primary Text Color"/>
     <resources>
+        <image name="F Digit" width="11" height="21"/>
+        <image name="M Digit" width="15" height="21"/>
+        <image name="S Digit" width="11" height="21"/>
+        <image name="T Digit" width="11" height="21"/>
+        <image name="W Digit" width="17" height="21"/>
         <image name="background" width="390" height="844"/>
         <image name="background2" width="390" height="844"/>
-        <image name="moonComplete" width="198" height="221"/>
+        <image name="bulan keju hepi" width="209" height="223"/>
         <namedColor name="SleepMuse Primary Color">
             <color red="0.24313725490196078" green="0.22352941176470589" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

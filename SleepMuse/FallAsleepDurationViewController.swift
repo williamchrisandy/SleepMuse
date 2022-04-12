@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FallAsleepDurationViewController: UIViewController
+class FallAsleepDurationViewController: UIViewController, UIPickerViewDelegate
 {
     
     @IBOutlet weak var fallAsleepTimePicker: UIDatePicker!
@@ -17,7 +17,7 @@ class FallAsleepDurationViewController: UIViewController
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        fallAsleepTimePicker.setValue(UIColor(named: "SleepMuse Primary Text Color"), forKey: "textColor")
     }
     
     @IBAction func fallAsleepTimeChosen(_ sender: Any) {
