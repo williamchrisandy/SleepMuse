@@ -35,11 +35,11 @@
             </objects>
             <point key="canvasLocation" x="-1731" y="-16"/>
         </scene>
-        <!--Qhanza-->
+        <!--William-->
         <scene sceneID="WuF-kv-Uig">
             <objects>
-                <viewControllerPlaceholder storyboardName="Qhanza" id="ztT-gh-OGW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Breathe" image="moon.fill" catalog="system" id="JrH-ZX-AwT"/>
+                <viewControllerPlaceholder storyboardName="William" id="ztT-gh-OGW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="History" image="clock" catalog="system" id="JrH-ZX-AwT"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3bD-LO-gfp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -62,11 +62,11 @@
             </objects>
             <point key="canvasLocation" x="-918" y="-16"/>
         </scene>
-        <!--William-->
+        <!--Qhanza-->
         <scene sceneID="nhV-5B-YQ6">
             <objects>
-                <viewControllerPlaceholder storyboardName="William" id="lDz-gh-ftE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="1w9-NR-mal"/>
+                <viewControllerPlaceholder storyboardName="Qhanza" id="lDz-gh-ftE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Exercise" image="moon.fill" catalog="system" id="1w9-NR-mal"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IiR-Jr-WDA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -94,7 +94,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="clock" catalog="system" width="128" height="121"/>
         <image name="moon.fill" catalog="system" width="128" height="121"/>
         <namedColor name="SleepMuse Gradient Text Color">
             <color red="0.96862745098039216" green="0.96078431372549022" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
