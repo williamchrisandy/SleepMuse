@@ -10,20 +10,48 @@ import UIKit
 
 class InsertNameViewController: UIViewController
 {
+    
+  
+    @IBOutlet weak var insertNameField: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var skipButton: UIButton!
+    @IBOutlet weak var errorMessage: UILabel!
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        errorMessage.isHidden = true
+        
+    }
+    
+    @IBAction func insertNameFieldUsed(_ sender: Any) {
+        }
+    
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        
+        if insertNameField.text?.count != 0
+        {
+            errorMessage.isHidden = true
+            UserDefaults.standard.set(insertNameField.text!, forKey: keyNickname)
+            performSegue(withIdentifier: "nextPageFallAsleepDuration", sender: self)
+        }
+        else
+        {
+            errorMessage.isHidden = false
+            errorMessage.text = "Required"
+        }
+        
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    @IBAction func skipButtonPressed(_ sender: Any) {
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "skipPageBreathingSession"
+        {
+            UserDefaults.standard.set(true, forKey: keyFirstTime)
+        }
     }
-    */
 }

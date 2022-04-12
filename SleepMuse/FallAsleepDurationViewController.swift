@@ -8,22 +8,36 @@
 
 import UIKit
 
-class FallAsleepDurationViewController: UIViewController
+class FallAsleepDurationViewController: UIViewController, UIPickerViewDelegate
 {
+    
+    @IBOutlet weak var fallAsleepTimePicker: UIDatePicker!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        fallAsleepTimePicker.setValue(UIColor(named: "SleepMuse Primary Text Color"), forKey: "textColor")
     }
+    
+    @IBAction func fallAsleepTimeChosen(_ sender: Any) {
+        print("Time Chosen")
+        
+        // add function to save it di Setting
+    }
+    
+    
+    @IBAction func nextButtonPressed(_ sender: Any) {
+    
+        // need to add condition that textfilenya harus diisi dlu baru bisa next
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "skipPageBreathingSession"
+        {
+            UserDefaults.standard.set(true, forKey: keyFirstTime)
+        }
     }
-    */
 }
