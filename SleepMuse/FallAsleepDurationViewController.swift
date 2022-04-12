@@ -32,5 +32,12 @@ class FallAsleepDurationViewController: UIViewController, UIPickerViewDelegate
         // need to add condition that textfilenya harus diisi dlu baru bisa next
 
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "skipPageBreathingSession"
+        {
+            UserDefaults.standard.set(true, forKey: keyFirstTime)
+        }
+    }
 }

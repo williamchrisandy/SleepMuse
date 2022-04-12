@@ -93,4 +93,13 @@ class SelectBedtimeReminderViewController: UIViewController
         sundayButton.setImage(sArray[sundayValue], for: .normal)
         UserDefaults.standard.set(sundayValue == 0 ? false : true, forKey: "sundayNotification")
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "skipPageBreathingSession"
+        {
+            UserDefaults.standard.set(true, forKey: keyFirstTime)
+        }
+    }
+    
 }
