@@ -12,4 +12,5 @@ let keyNickname = "nickname"
 let keyFallAsleepDuration = "fallAsleepDuration"
 let keyNotificationTime = "notificationTime"
 let keyNotificationOn = "notificationOn"
+let keyMondayNotification = "mondayNotification"
 //- Repeat

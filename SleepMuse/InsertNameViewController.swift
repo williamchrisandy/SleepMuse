@@ -33,6 +33,7 @@ class InsertNameViewController: UIViewController
         if insertNameField.text?.count != 0
         {
             errorMessage.isHidden = true
+            UserDefaults.standard.set(insertNameField.text!, forKey: keyNickname)
             performSegue(withIdentifier: "nextPageFallAsleepDuration", sender: self)
         }
         else

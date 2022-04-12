@@ -22,6 +22,7 @@ class FallAsleepDurationViewController: UIViewController, UIPickerViewDelegate
     
     @IBAction func fallAsleepTimeChosen(_ sender: Any) {
         print("Time Chosen")
+        
         // add function to save it di Setting
     }
     
