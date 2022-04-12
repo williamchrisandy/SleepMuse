@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B02C8202805338E009E3D26 /* Music+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B02C81C2805338E009E3D26 /* Music+CoreDataClass.swift */; };
+		3B02C8212805338E009E3D26 /* Music+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B02C81D2805338E009E3D26 /* Music+CoreDataProperties.swift */; };
+		3B02C8222805338E009E3D26 /* Session+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B02C81E2805338E009E3D26 /* Session+CoreDataClass.swift */; };
+		3B02C8232805338E009E3D26 /* Session+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B02C81F2805338E009E3D26 /* Session+CoreDataProperties.swift */; };
 		3B202A3027FEA45200A58166 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A2F27FEA45200A58166 /* AppDelegate.swift */; };
 		3B202A3227FEA45200A58166 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A3127FEA45200A58166 /* SceneDelegate.swift */; };
 		3B202A3427FEA45200A58166 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A3327FEA45200A58166 /* ViewController.swift */; };
@@ -32,6 +36,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B02C81C2805338E009E3D26 /* Music+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Music+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3B02C81D2805338E009E3D26 /* Music+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Music+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3B02C81E2805338E009E3D26 /* Session+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3B02C81F2805338E009E3D26 /* Session+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Session+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3B202A2C27FEA45200A58166 /* SleepMuse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepMuse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B202A2F27FEA45200A58166 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B202A3127FEA45200A58166 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +80,10 @@
 		3B202A2327FEA45100A58166 = {
 			isa = PBXGroup;
 			children = (
+				3B02C81C2805338E009E3D26 /* Music+CoreDataClass.swift */,
+				3B02C81D2805338E009E3D26 /* Music+CoreDataProperties.swift */,
+				3B02C81E2805338E009E3D26 /* Session+CoreDataClass.swift */,
+				3B02C81F2805338E009E3D26 /* Session+CoreDataProperties.swift */,
 				3B202A2E27FEA45200A58166 /* SleepMuse */,
 				3B202A2D27FEA45200A58166 /* Products */,
 			);
@@ -191,17 +203,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B02C8232805338E009E3D26 /* Session+CoreDataProperties.swift in Sources */,
 				3B202A6427FEC2B900A58166 /* BreathingSessionDoneViewController.swift in Sources */,
 				3B202A5227FEC09F00A58166 /* InsertNameViewController.swift in Sources */,
 				3B202A5627FEC18700A58166 /* SelectBedtimeReminderViewController.swift in Sources */,
 				3B202A3427FEA45200A58166 /* ViewController.swift in Sources */,
 				3B202A3A27FEA45200A58166 /* SleepMuse.xcdatamodeld in Sources */,
+				3B02C8212805338E009E3D26 /* Music+CoreDataProperties.swift in Sources */,
 				3BFB776E27FFE6BF0062B58B /* Constants.swift in Sources */,
 				3B202A5427FEC12300A58166 /* FallAsleepDurationViewController.swift in Sources */,
+				3B02C8202805338E009E3D26 /* Music+CoreDataClass.swift in Sources */,
 				3B202A5E27FEC22800A58166 /* HistoryViewController.swift in Sources */,
 				3B202A6027FEC26500A58166 /* StartBreathingViewController.swift in Sources */,
 				3B2BF99D28048809003C734B /* HistoryCollectionViewCell.swift in Sources */,
 				3B202A3027FEA45200A58166 /* AppDelegate.swift in Sources */,
+				3B02C8222805338E009E3D26 /* Session+CoreDataClass.swift in Sources */,
 				3B202A3227FEA45200A58166 /* SceneDelegate.swift in Sources */,
 				3B202A6227FEC29600A58166 /* BreathingSessionViewController.swift in Sources */,
 				3B202A5A27FEC1F400A58166 /* SetUpCompleteViewController.swift in Sources */,
@@ -351,6 +367,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SleepMuse/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -379,6 +396,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SleepMuse/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

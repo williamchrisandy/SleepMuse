@@ -165,14 +165,14 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Dnh-vV-UA0">
-                                                                    <rect key="frame" x="210" y="65" width="21" height="19"/>
+                                                                    <rect key="frame" x="210" y="65" width="18" height="16"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="height" constant="21" id="OQ1-e8-xKe"/>
+                                                                        <constraint firstAttribute="height" constant="18" id="OQ1-e8-xKe"/>
                                                                         <constraint firstAttribute="width" secondItem="Dnh-vV-UA0" secondAttribute="height" multiplier="1:1" id="Y76-dv-h5y"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwI-5V-0Cv">
-                                                                    <rect key="frame" x="231" y="64" width="69" height="18"/>
+                                                                    <rect key="frame" x="228" y="64" width="72" height="18"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                                     <color key="textColor" name="SleepMuse Primary Text Color"/>
                                                                     <nil key="highlightedColor"/>
@@ -208,6 +208,11 @@
                                                         <size key="customSize" width="320" height="146"/>
                                                         <connections>
                                                             <outlet property="imageViewDaySymbol" destination="0uM-Vn-Abf" id="ULs-0o-85y"/>
+                                                            <outlet property="imageViewUpDown" destination="Dnh-vV-UA0" id="ZAc-WJ-Nzg"/>
+                                                            <outlet property="labelAverageDuration" destination="M2r-PJ-s54" id="wrL-pK-EZz"/>
+                                                            <outlet property="labelAverageStartTime" destination="Sdi-Xj-Nrb" id="o8E-bb-zCp"/>
+                                                            <outlet property="labelChanges" destination="mwI-5V-0Cv" id="EZK-O7-wuZ"/>
+                                                            <outlet property="labelTitle" destination="fb0-gN-2Kq" id="axX-JG-ezw"/>
                                                         </connections>
                                                     </collectionViewCell>
                                                 </cells>
@@ -218,6 +223,9 @@
                                             </collectionView>
                                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fvf-Jm-lNn">
                                                 <rect key="frame" x="20" y="368" width="280" height="26"/>
+                                                <connections>
+                                                    <action selector="pageControlValueChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="wmY-Yp-vn1"/>
+                                                </connections>
                                             </pageControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekly Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UM2-Cg-72v">
                                                 <rect key="frame" x="20" y="414" width="280" height="24"/>
@@ -225,9 +233,6 @@
                                                 <color key="textColor" name="SleepMuse Primary Text Color"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="jGN-cL-TTb">
-                                                <rect key="frame" x="20" y="600" width="280" height="26"/>
-                                            </pageControl>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="86H-gT-wjf">
                                                 <rect key="frame" x="20" y="446" width="280" height="146"/>
                                                 <color key="backgroundColor" name="SleepMuse Card Background Color"/>
@@ -288,14 +293,14 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jBq-wA-CYs">
-                                                                    <rect key="frame" x="210" y="53.5" width="21" height="19"/>
+                                                                    <rect key="frame" x="210" y="53.5" width="18" height="16"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="jBq-wA-CYs" secondAttribute="height" multiplier="1:1" id="FEf-yf-EaP"/>
-                                                                        <constraint firstAttribute="height" constant="21" id="KJs-DS-VRL"/>
+                                                                        <constraint firstAttribute="height" constant="18" id="KJs-DS-VRL"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTy-Ka-EDh">
-                                                                    <rect key="frame" x="231" y="52.5" width="69" height="18"/>
+                                                                    <rect key="frame" x="228" y="52.5" width="72" height="18"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                                     <color key="textColor" name="SleepMuse Primary Text Color"/>
                                                                     <nil key="highlightedColor"/>
@@ -327,6 +332,13 @@
                                                             <constraint firstItem="1Mm-D8-rCA" firstAttribute="top" secondItem="kTv-yF-jAD" secondAttribute="bottom" constant="8" symbolic="YES" id="wl3-9j-YWa"/>
                                                         </constraints>
                                                         <size key="customSize" width="320" height="134"/>
+                                                        <connections>
+                                                            <outlet property="imageViewUpDown" destination="jBq-wA-CYs" id="jFI-LD-m4H"/>
+                                                            <outlet property="labelAverageDuration" destination="iOn-Mf-OGk" id="9UA-5Y-5xz"/>
+                                                            <outlet property="labelAverageStartTime" destination="sU2-3F-vlE" id="b2P-14-Bhn"/>
+                                                            <outlet property="labelChanges" destination="aTy-Ka-EDh" id="ybz-yx-rWc"/>
+                                                            <outlet property="labelTitle" destination="3Yp-5E-dzf" id="Ki4-Vq-I52"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                                 <connections>
@@ -334,6 +346,12 @@
                                                     <outlet property="delegate" destination="Y6W-OH-hqX" id="QUH-4v-tvf"/>
                                                 </connections>
                                             </collectionView>
+                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="jGN-cL-TTb">
+                                                <rect key="frame" x="20" y="600" width="280" height="26"/>
+                                                <connections>
+                                                    <action selector="pageControlValueChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="813-5d-Ujc"/>
+                                                </connections>
+                                            </pageControl>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="A1q-BT-oOa" firstAttribute="top" secondItem="oBV-SW-Dnr" secondAttribute="bottom" constant="8" symbolic="YES" id="1Si-UK-GEY"/>
@@ -395,12 +413,22 @@
                     <connections>
                         <outlet property="collectionViewDaily" destination="A1q-BT-oOa" id="GQ5-E8-dIc"/>
                         <outlet property="collectionViewWeekly" destination="86H-gT-wjf" id="dlh-Bp-eTD"/>
+                        <outlet property="pageControlDaily" destination="fvf-Jm-lNn" id="tNj-Q5-ujO"/>
+                        <outlet property="pageControlWeekly" destination="jGN-cL-TTb" id="bh0-po-aTW"/>
                         <outlet property="viewRecent" destination="d01-HF-T7I" id="LXg-LV-59Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="16.875" y="79.225352112676063"/>
+        </scene>
+        <!--Jesi-->
+        <scene sceneID="DAx-Hk-8ic">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Jesi" id="psr-k7-kMZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g1n-2r-FAO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="625" y="-67"/>
         </scene>
     </scenes>
     <resources>

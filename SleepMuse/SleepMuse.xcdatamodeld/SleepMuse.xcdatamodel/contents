@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Session" representedClassName="Session" syncable="YES" codeGenerationType="class"/>
+    <entity name="Music" representedClassName="Music" syncable="YES">
+        <attribute name="fileName" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="usedIn" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Session" inverseName="with" inverseEntity="Session"/>
+    </entity>
+    <entity name="Session" representedClassName="Session" syncable="YES">
+        <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="with" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Music" inverseName="usedIn" inverseEntity="Music"/>
+    </entity>
     <elements>
-        <element name="Session" positionX="-63" positionY="-18" width="128" height="29"/>
+        <element name="Session" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="Music" positionX="-63" positionY="-9" width="128" height="74"/>
     </elements>
 </model>

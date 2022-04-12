@@ -7,20 +7,35 @@
 //
 
 import UIKit
+import CoreData
 
 class HistoryViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
 {
     @IBOutlet weak var viewRecent: UIView!
     @IBOutlet weak var collectionViewDaily: UICollectionView!
     @IBOutlet weak var collectionViewWeekly: UICollectionView!
+    @IBOutlet weak var pageControlDaily: UIPageControl!
+    @IBOutlet weak var pageControlWeekly: UIPageControl!
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var arraySessionDaily: [Session] = []
+    var arraySessionWeekly: [Session] = []
+    var lastSession: Session?
+    var context: NSManagedObjectContext?
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         viewRecent.layer.cornerRadius = 20
         collectionViewDaily.layer.cornerRadius = 20
+        collectionViewWeekly.layer.cornerRadius = 20
+        pageControlDaily.numberOfPages = 3
+        pageControlWeekly.numberOfPages = 3
+        
+        
+        context = appDelegate.persistentContainer.viewContext
     }
-    
+
     override func viewWillAppear(_ animated: Bool)
     {
         self.navigationController?.visibleViewController?.navigationItem.title = "History"
@@ -36,10 +51,25 @@ class HistoryViewController: UIViewController, UICollectionViewDataSource, UICol
         
         let settingsButton = UIBarButtonItem.init(image: UIImage(systemName: "gearshape.fill"), style: .done, target: self, action: #selector(self.openSetting(_:)))
         settingsButton.tintColor = UIColor.white
-        let notificationButton = UIBarButtonItem.init(image: UIImage(systemName: "gearshape"), style: .done, target: self, action: #selector(self.openSetting(_:)))
-        settingsButton.tintColor = UIColor.white
-//        self.navigationController?.visibleViewController?.navigationItem.setRightBarButton(settingsButton, animated: false)
-        self.navigationController?.visibleViewController?.navigationItem.setRightBarButtonItems([settingsButton,notificationButton], animated: false)
+        self.navigationController?.visibleViewController?.navigationItem.setRightBarButton(settingsButton, animated: false)
+        
+        getSessionData()
+    }
+    
+    func getSessionData()
+    {
+        do
+        {
+            let fetchRequest: NSFetchRequest<Session> = Session.fetchRequest(since: Date())
+            let result = try context?.fetch(fetchRequest)
+//            arrayProduct = result
+            collectionViewDaily.reloadData()
+            collectionViewWeekly.reloadData()
+        }
+        catch let error
+        {
+            print(error.localizedDescription)
+        }
     }
     
     @IBAction func openSetting(_ sender: UIButton)
@@ -60,9 +90,15 @@ class HistoryViewController: UIViewController, UICollectionViewDataSource, UICol
         
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-//        collectionView == collectionViewDaily ? "collectionViewDailyCell" : "collectionViewWeeklyCell"
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionView == collectionViewDaily ? "collectionViewDailyCell" : "collectionViewWeeklyCell", for: indexPath) as! HistoryCollectionViewCell
-//        cell.imageViewDaySymbol.isHidden = true
+        if collectionView == collectionViewDaily
+        {
+            
+        }
+        else if collectionView == collectionViewWeekly
+        {
+            
+        }
             return cell
     }
         
@@ -71,4 +107,8 @@ class HistoryViewController: UIViewController, UICollectionViewDataSource, UICol
         return CGSize(width: collectionView.frame.width, height: collectionView == collectionViewDaily ? 146 : 134)
     }
     
+    @IBAction func pageControlValueChanged(_ sender: UIPageControl)
+    {
+        
+    }
 }

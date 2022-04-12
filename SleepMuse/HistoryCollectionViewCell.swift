@@ -10,10 +10,9 @@ import UIKit
 class HistoryCollectionViewCell: UICollectionViewCell
 {
     @IBOutlet weak var imageViewDaySymbol: UIImageView!
-    
-    override func awakeFromNib()
-    {
-        super.awakeFromNib()
-//        imageViewDaySymbol.isHidden = true
-    }
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var labelAverageDuration: UILabel!
+    @IBOutlet weak var labelAverageStartTime: UILabel!
+    @IBOutlet weak var labelChanges: UILabel!
+    @IBOutlet weak var imageViewUpDown: UIImageView!
 }
