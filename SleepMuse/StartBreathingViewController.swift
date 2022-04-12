@@ -47,7 +47,7 @@ class StartBreathingViewController: UIViewController, UIPickerViewDataSource, UI
         musicTimerDatePicker.datePickerMode = .countDownTimer
         musicTimerDatePicker.minuteInterval = 15
         
-        self.musicTimerDatePicker.addTarget(self, action: #selector(datePickedValueChanged), for: .valueChanged)
+        self.musicTimerDatePicker?.addTarget(self, action: #selector(datePickedValueChanged), for: .valueChanged)
         musicTimerDatePicker.countDownDuration = 2
     }
     

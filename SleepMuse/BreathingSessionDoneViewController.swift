@@ -17,11 +17,20 @@ class BreathingSessionDoneViewController: UIViewController
     // For Playing The Audio
     var player: AVAudioPlayer?
     
+    @IBOutlet weak var closeButton: UIButton!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func closeButtonPressed(_ sender: Any) {
+        musicPlayer.player?.stop()
+        dismiss(animated: true, completion: nil)
+    }
+    
+
 
     /*
     // MARK: - Navigation
