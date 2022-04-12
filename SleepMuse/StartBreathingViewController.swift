@@ -10,38 +10,30 @@ import UIKit
 import AVFoundation
 
 class StartBreathingViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    var modelAudioPlayer = ModelAudioPlayer()
+    
     // Outlets
     @IBOutlet weak var musicPicker: UIPickerView!
-    @IBOutlet weak var musicTimerHourPicker: UIPickerView!
-    @IBOutlet weak var musicTimerMinPicker: UIPickerView!
+    @IBOutlet weak var musicTimerDatePicker: UIDatePicker!
     
     @IBOutlet weak var startBreathingButton: UIButton!
-    
-    // Dictionary Data
-    let dataMusic : KeyValuePairs =
-                    ["Rain Thunder": "rain thunder",
-                     "Mountain and Waterfall": "mountain and waterfall",
-                     "Ocean Waves": "ocean waves",
-                     "Fast River": "fast river",
-                     "Calm River": "calm river",
-                     "Rain Forest": "rain forest",
-                     "Bamboo Forest": "bamboo forest"
-                    ]
-    
-    // Array Data v2 - Based on UX and Spotify Sleep Timer
-    let dataMusicTimerHour = [Int](0..<3)
-    let dataMusicTimerMin = [0, 15, 30, 45]
     
     // Color Constants
     let sleepmuseWhiteColor = UIColor(named: "SleepMuse Gradient Text Color")
     
     // The Selected Picker View Rows
     var selectedMusicRow = 0
-    var selectedMusicTimerHourRow = 0
-    var selectedMusicTimerMinRow = 0
     
     // For Playing The Audio
     var player: AVAudioPlayer?
+    
+    // Passing the Data with Segue
+    var pickedMusic: PickedMusic?
+    
+    // Passing The Data from Viewer Controller One to the Next
+    public var passMusicAudio: String?
+    public var passTotalMusicRepeat: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,79 +42,37 @@ class StartBreathingViewController: UIViewController, UIPickerViewDataSource, UI
         musicPicker.dataSource = self
         musicPicker.delegate = self
         
-        // Initializing the musicTimerHourPicker & musicTimerMinPicker IBOutlets
-        musicTimerHourPicker.dataSource = self
-        musicTimerHourPicker.delegate = self
-        musicTimerMinPicker.dataSource = self
-        musicTimerMinPicker.delegate = self
+        // Customizing the Music Timer Date Picker IBOutlet
+        musicTimerDatePicker.setValue(sleepmuseWhiteColor, forKeyPath: "textColor")
+        musicTimerDatePicker.datePickerMode = .countDownTimer
+        musicTimerDatePicker.minuteInterval = 15
+        
+        self.musicTimerDatePicker.addTarget(self, action: #selector(datePickedValueChanged), for: .valueChanged)
+        musicTimerDatePicker.countDownDuration = 2
     }
     
     @IBAction func startBreathingButtonPressed(_ sender: UIButton) {
         // Selected Music
         self.selectedMusicRow = musicPicker.selectedRow(inComponent: 0)
-        let selectedMusic = Array(self.dataMusic)[self.selectedMusicRow]
-        let musicName = selectedMusic.key
-        let musicAudio = selectedMusic.value
+        let musicName = musicDataArray[self.selectedMusicRow].musicName
+        let musicAudio = musicDataArray[self.selectedMusicRow].musicAudio
         print("The Music Name : \(musicName)")
         print("The Music Audio : \(musicAudio)")
         
-        // Selected Music Timer (Hour)
-        self.selectedMusicTimerHourRow = musicTimerHourPicker.selectedRow(inComponent: 0)
-        let selectedMusicTimerHour = Array(self.dataMusicTimerHour)[self.selectedMusicTimerHourRow]
-        print("The Music Timer Hour : \(selectedMusicTimerHour)")
-        
-        // Selected Music Timer (Minute)
-        self.selectedMusicTimerMinRow = musicTimerMinPicker.selectedRow(inComponent: 0)
-        let selectedMusicTimerMin = Array(self.dataMusicTimerMin)[self.selectedMusicTimerMinRow]
-        print("The Music Timer Minutes : \(selectedMusicTimerMin)")
-        
-        // Convert Hour and Minutes to Seconds
-        let hourToSec = Double(selectedMusicTimerHour) * 3600
-        print("Hour to Seconds : \(hourToSec)")
-        let minToSec = Double(selectedMusicTimerMin) * 60
-        print("Minutes to Seconds : \(minToSec)")
-        let totalSeconds = hourToSec + minToSec
-        print("Total Seconds : \(totalSeconds)")
+        // Selected Music Timer (Using Date Picker - Count Down Timer)
+        let selectedMusicTimer = musicTimerDatePicker.countDownDuration
+        print("selectedMusicTimer : \(selectedMusicTimer)")
         
         // Calculate the Repeat of the Music
-        let totalMusicRepeat = totalSeconds / 60
+        let totalMusicRepeat = selectedMusicTimer / 60
         print("Total Music Repeat : \(totalMusicRepeat)")
         
+        pickedMusic = PickedMusic(chosenMusicAudio: musicAudio, chosenMusicTimer: selectedMusicTimer, chosenMusicRepeat: totalMusicRepeat)
+        print("pickedMusic : \(String(describing: pickedMusic))")
         
-        // Play the Audio File v2 with Music Duration (Works)
-        if let player = player, player.isPlaying {
-            // Stop playback
-            player.stop()
-            
-        } else {
-            // Set up the Audio
-            let urlString = Bundle.main.path(forResource: "\(musicAudio)", ofType: "mp3")
-            
-            // Play the audio
-            do {
-                try AVAudioSession.sharedInstance().setMode(.default)
-                try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-                
-                guard let urlString = urlString else {
-                    return
-                }
-                
-                player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString))
-                
-                guard let player = player else {
-                    return
-                }
-                player.play()
-                player.numberOfLoops = Int(totalMusicRepeat)
-                
-            } catch {
-                print("Something went wrong")
-            }
-        }
         
-        // The StartBreathingViewController Changes to the BreathingSessionViewController
-        let vc = storyboard?.instantiateViewController(identifier: "breathingsessionVC") as! BreathingSessionViewController
-        present(vc, animated: true)
+        // The StartBreathingViewController Changes to the BreathingSessionViewController (Using Segue)
+//        performSegue(withIdentifier: "goToBreathingSession", sender: self)
     }
     
     // Functions for Customizing the "Choose the Music" Picker View
@@ -131,13 +81,7 @@ class StartBreathingViewController: UIViewController, UIPickerViewDataSource, UI
     }
         
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView == musicPicker {
-            return dataMusic.count
-        } else if pickerView == musicTimerHourPicker{
-            return dataMusicTimerHour.count
-        } else {
-            return dataMusicTimerMin.count
-        }
+        return musicDataArray.count
     }
         
     // Function for Customizing the musicPicker Text Size, Color, Alignment and Data
@@ -145,30 +89,30 @@ class StartBreathingViewController: UIViewController, UIPickerViewDataSource, UI
         let label = UILabel()
         label.font = UIFont(name: "System", size: 17)
         label.textColor = sleepmuseWhiteColor
-        
-        // Accessing the Picker View Data with Dictionary
-        if pickerView == musicPicker {
-            label.text = dataMusic[row].key
-            label.textAlignment = .center
-        } else if pickerView == musicTimerHourPicker{
-            label.text = "\(dataMusicTimerHour[row]) hour"
-            label.textAlignment = .right
-        } else {
-            label.text = "\(dataMusicTimerMin[row]) min"
-            label.textAlignment = .left
-        }
-        
+        label.text = musicDataArray[row].musicName // This is using Array in the MusicData Struct
+        label.textAlignment = .center
         return label
     }
+    
+    // Contoh Kodingan untuk Membatasi Pilihan Waktu Music Timer
+    @objc func datePickedValueChanged (sender: UIDatePicker) {
+        if (self.musicTimerDatePicker.countDownDuration > 7200) { //5400 seconds = 1h30min
+            self.musicTimerDatePicker.countDownDuration = 900.0; //Defaults to 1 minute
+        }
+        print("Test DatePickedValueChanged")
+    }
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "goToBreathingSession"
+        {
+            let destination = segue.destination as! BreathingSessionViewController
+            destination.pickedMusicData = pickedMusic
+        }
     }
-    */
+
 }

@@ -6,9 +6,17 @@
 //
 
 import UIKit
+import AVFoundation
 
 class BreathingSessionDoneViewController: UIViewController
 {
+    var musicPlayer = ModelAudioPlayer()
+    var musicData: MusicData?
+    var pickedMusicData: PickedMusic?
+    
+    // For Playing The Audio
+    var player: AVAudioPlayer?
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
