@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B1318E42805C6A400963EFC /* Voice Instructor in Resources */ = {isa = PBXBuildFile; fileRef = 3B1318E32805C6A400963EFC /* Voice Instructor */; };
 		3B202A3027FEA45200A58166 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A2F27FEA45200A58166 /* AppDelegate.swift */; };
 		3B202A3227FEA45200A58166 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A3127FEA45200A58166 /* SceneDelegate.swift */; };
 		3B202A3427FEA45200A58166 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A3327FEA45200A58166 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B1318E32805C6A400963EFC /* Voice Instructor */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Voice Instructor"; path = "../../../../../../Dropbox (DeveloperAcademy-ID)/Assets-Team 7 (MC1)/Voice Instructor"; sourceTree = "<group>"; };
 		3B202A2C27FEA45200A58166 /* SleepMuse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SleepMuse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B202A2F27FEA45200A58166 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B202A3127FEA45200A58166 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				3B202A4F27FEC06400A58166 /* Jesi.storyboard */,
 				3B202A4027FEA45300A58166 /* Info.plist */,
 				3B202A3827FEA45200A58166 /* SleepMuse.xcdatamodeld */,
+				3B1318E32805C6A400963EFC /* Voice Instructor */,
 				3BFB776F280288260062B58B /* Pink Noises */,
 				3BFB776B27FFE3E40062B58B /* Settings.bundle */,
 				5770555D2805AE1B007065D3 /* ModelAudioPlayer.swift */,
@@ -188,6 +191,7 @@
 				3B202A4E27FEC04F00A58166 /* William.storyboard in Resources */,
 				3B202A5027FEC06400A58166 /* Jesi.storyboard in Resources */,
 				3B202A3F27FEA45300A58166 /* LaunchScreen.storyboard in Resources */,
+				3B1318E42805C6A400963EFC /* Voice Instructor in Resources */,
 				3B202A3C27FEA45300A58166 /* Assets.xcassets in Resources */,
 				3B202A3727FEA45200A58166 /* Main.storyboard in Resources */,
 				3B202A4C27FEC04100A58166 /* Qhanza.storyboard in Resources */,
