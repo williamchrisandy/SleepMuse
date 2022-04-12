@@ -28,11 +28,11 @@ class SelectBedtimeReminderViewController: UIViewController
     
     @IBOutlet weak var sundayButton: UIButton!
   
-    let mArray = [UIImage(named: "M Digit Selected"), UIImage(named: "M Digit")]
-    let tArray = [UIImage(named: "T Digit Selected"), UIImage(named: "T Digit")]
-    let wArray = [UIImage(named: "W Digit Selected"), UIImage(named: "W Digit")]
-    let fArray = [UIImage(named: "F Digit Selected"), UIImage(named: "F Digit")]
-    let sArray = [UIImage(named: "S Digit Selected"), UIImage(named: "S Digit")]
+    let mArray = [UIImage(named: "M Digit"), UIImage(named: "M Digit Selected")]
+    let tArray = [UIImage(named: "T Digit"), UIImage(named: "T Digit Selected")]
+    let wArray = [UIImage(named: "W Digit"), UIImage(named: "W Digit Selected")]
+    let fArray = [UIImage(named: "F Digit"), UIImage(named: "F Digit Selected")]
+    let sArray = [UIImage(named: "S Digit"), UIImage(named: "S Digit Selected")]
     
     var mondayValue = 0
     var tuesdayValue = 0
