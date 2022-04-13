@@ -6,14 +6,31 @@
 //
 
 import UIKit
+import AVFoundation
 
 class BreathingSessionDoneViewController: UIViewController
 {
+    var musicPlayer = ModelAudioPlayer()
+    var musicData: MusicData?
+    var pickedMusicData: PickedMusic?
+    
+    // For Playing The Audio
+    var player: AVAudioPlayer?
+    
+    @IBOutlet weak var closeButton: UIButton!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func closeButtonPressed(_ sender: Any) {
+        musicPlayer.player?.stop()
+        dismiss(animated: true, completion: nil)
+    }
+    
+
 
     /*
     // MARK: - Navigation
