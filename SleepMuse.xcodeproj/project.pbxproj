@@ -40,6 +40,7 @@
 		3B80AC752806960A005DDA4A /* calm river.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3B80AC6A2806960A005DDA4A /* calm river.mp3 */; };
 		3B80AC762806960A005DDA4A /* Breathe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3B80AC6C2806960A005DDA4A /* Breathe.mp3 */; };
 		3B80AC772806960A005DDA4A /* Opening.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3B80AC6D2806960A005DDA4A /* Opening.mp3 */; };
+		3B80AC792806F56F005DDA4A /* Static Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B80AC782806F56F005DDA4A /* Static Function.swift */; };
 		3BFB776C27FFE3E40062B58B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3BFB776B27FFE3E40062B58B /* Settings.bundle */; };
 		3BFB776E27FFE6BF0062B58B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFB776D27FFE6BF0062B58B /* Constants.swift */; };
 		5770555E2805AE1B007065D3 /* ModelAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770555D2805AE1B007065D3 /* ModelAudioPlayer.swift */; };
@@ -83,6 +84,7 @@
 		3B80AC6A2806960A005DDA4A /* calm river.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "calm river.mp3"; sourceTree = "<group>"; };
 		3B80AC6C2806960A005DDA4A /* Breathe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Breathe.mp3; sourceTree = "<group>"; };
 		3B80AC6D2806960A005DDA4A /* Opening.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Opening.mp3; sourceTree = "<group>"; };
+		3B80AC782806F56F005DDA4A /* Static Function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Static Function.swift"; sourceTree = "<group>"; };
 		3BFB776B27FFE3E40062B58B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		3BFB776D27FFE6BF0062B58B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5770555D2805AE1B007065D3 /* ModelAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAudioPlayer.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				3B202A6127FEC29600A58166 /* BreathingSessionViewController.swift */,
 				3B202A6327FEC2B900A58166 /* BreathingSessionDoneViewController.swift */,
 				3BFB776D27FFE6BF0062B58B /* Constants.swift */,
+				3B80AC782806F56F005DDA4A /* Static Function.swift */,
 				5770555D2805AE1B007065D3 /* ModelAudioPlayer.swift */,
 				5770555F2805AE46007065D3 /* MusicData.swift */,
 				577055612805AE5F007065D3 /* PickedMusic.swift */,
@@ -278,6 +281,7 @@
 				3B02C8202805338E009E3D26 /* Music+CoreDataClass.swift in Sources */,
 				3B202A5E27FEC22800A58166 /* HistoryViewController.swift in Sources */,
 				3B202A6027FEC26500A58166 /* StartBreathingViewController.swift in Sources */,
+				3B80AC792806F56F005DDA4A /* Static Function.swift in Sources */,
 				3B2BF99D28048809003C734B /* HistoryCollectionViewCell.swift in Sources */,
 				3B202A3027FEA45200A58166 /* AppDelegate.swift in Sources */,
 				3B02C8222805338E009E3D26 /* Session+CoreDataClass.swift in Sources */,

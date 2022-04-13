@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 struct MusicData {
     var musicName: String

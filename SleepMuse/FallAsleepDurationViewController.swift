@@ -10,34 +10,51 @@ import UIKit
 
 class FallAsleepDurationViewController: UIViewController, UIPickerViewDelegate
 {
-    
     @IBOutlet weak var fallAsleepTimePicker: UIDatePicker!
+    
+    let standardUserDefault = UserDefaults.standard
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         fallAsleepTimePicker.setValue(UIColor(named: "SleepMuse Primary Text Color"), forKey: "textColor")
     }
     
-    @IBAction func fallAsleepTimeChosen(_ sender: Any) {
-        print("Time Chosen")
-        
-        // add function to save it di Setting
+    override func viewWillAppear(_ animated: Bool)
+    {
+        updateViews()
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationWillEnterForeground(_:)), name: UIApplication.willEnterForegroundNotification, object: UIApplication.shared)
+    }
+    
+    @objc func applicationWillEnterForeground(_ notification: NSNotification)
+    {
+        updateViews()
+    }
+    
+    func updateViews()
+    {
+        fallAsleepTimePicker.countDownDuration = standardUserDefault.double(forKey: keyFallAsleepDuration)
+    }
+    
+    @IBAction func fallAsleepTimeChosen(_ sender: UIDatePicker)
+    {
+        if (sender.countDownDuration > 7200)
+        {
+            sender.countDownDuration = 7200;
+        }
     }
     
     
-    @IBAction func nextButtonPressed(_ sender: Any) {
-    
-        // need to add condition that textfilenya harus diisi dlu baru bisa next
-
+    @IBAction func nextButtonPressed(_ sender: Any)
+    {
+        standardUserDefault.set(fallAsleepTimePicker.countDownDuration, forKey: keyFallAsleepDuration)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.identifier == "skipPageBreathingSession"
         {
-            UserDefaults.standard.set(true, forKey: keyFirstTime)
+            StaticFunction.setUpCompleted()
         }
     }
 }

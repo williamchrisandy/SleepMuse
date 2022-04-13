@@ -12,6 +12,9 @@ import CoreData
 class HistoryViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
 {
     @IBOutlet weak var viewRecent: UIView!
+    @IBOutlet weak var labelRecentMusic: UILabel!
+    @IBOutlet weak var labelRecentDuration: UILabel!
+    @IBOutlet weak var labelRecentStartTime: UILabel!
     @IBOutlet weak var collectionViewDaily: UICollectionView!
     @IBOutlet weak var collectionViewWeekly: UICollectionView!
     @IBOutlet weak var pageControlDaily: UIPageControl!
@@ -31,7 +34,7 @@ class HistoryViewController: UIViewController, UICollectionViewDataSource, UICol
         collectionViewWeekly.layer.cornerRadius = 20
         pageControlDaily.numberOfPages = 3
         pageControlWeekly.numberOfPages = 3
-        
+
         
         context = appDelegate.persistentContainer.viewContext
     }
@@ -62,7 +65,7 @@ class HistoryViewController: UIViewController, UICollectionViewDataSource, UICol
         {
             let fetchRequest: NSFetchRequest<Session> = Session.fetchRequest(since: Date())
             let result = try context?.fetch(fetchRequest)
-//            arrayProduct = result
+            
             collectionViewDaily.reloadData()
             collectionViewWeekly.reloadData()
         }
@@ -74,13 +77,17 @@ class HistoryViewController: UIViewController, UICollectionViewDataSource, UICol
     
     @IBAction func openSetting(_ sender: UIButton)
     {
+        performSegue(withIdentifier: "goToReminderSegue", sender: self)
+        /*
+        // To Settings
         let app = UIApplication.shared
         let url = URL(string: UIApplication.openSettingsURLString)!
-        
+
         if app.canOpenURL(url)
         {
             app.open(url, completionHandler: nil)
         }
+         */
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int

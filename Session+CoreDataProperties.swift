@@ -26,7 +26,7 @@ extension Session
         return fetchRequest
     }
 
-    @NSManaged public var duration: Int16
+    @NSManaged public var duration: Double
     @NSManaged public var startTime: Date?
     @NSManaged public var with: Music?
 

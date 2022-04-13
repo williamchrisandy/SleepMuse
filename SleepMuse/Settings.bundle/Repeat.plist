@@ -14,7 +14,7 @@
 			<key>Key</key>
 			<string>mondayNotification</string>
 			<key>DefaultValue</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -24,7 +24,7 @@
 			<key>Key</key>
 			<string>tuesdayNotification</string>
 			<key>DefaultValue</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -34,7 +34,7 @@
 			<key>Key</key>
 			<string>wednesdayNotification</string>
 			<key>DefaultValue</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -44,7 +44,7 @@
 			<key>Key</key>
 			<string>thursdayNotification</string>
 			<key>DefaultValue</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -54,7 +54,7 @@
 			<key>Key</key>
 			<string>fridayNotification</string>
 			<key>DefaultValue</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -64,7 +64,7 @@
 			<key>Key</key>
 			<string>saturdayNotification</string>
 			<key>DefaultValue</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Type</key>
@@ -74,7 +74,7 @@
 			<key>Key</key>
 			<string>sundayNotification</string>
 			<key>DefaultValue</key>
-			<true/>
+			<false/>
 		</dict>
 	</array>
 </dict>

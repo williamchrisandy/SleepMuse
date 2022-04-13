@@ -74,7 +74,7 @@
                                     <action selector="startBreathingButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="udt-Hj-GPo"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="900" minuteInterval="15" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mQ-VO-a9e">
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="3600" minuteInterval="15" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mQ-VO-a9e">
                                 <rect key="frame" x="35" y="382" width="320" height="123"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" name="SleepMuse Gradient Text Color"/>
@@ -98,6 +98,7 @@
                         <outlet property="musicTimerDatePicker" destination="4mQ-VO-a9e" id="4TR-ta-aIC"/>
                         <outlet property="startBreathingButton" destination="Vm6-I7-4ST" id="WlU-HH-rSh"/>
                         <segue destination="cWQ-4D-OHv" kind="show" identifier="goToBreathingSession" id="HUM-gd-wT6"/>
+                        <segue destination="mtO-1v-9kd" kind="show" identifier="goToReminderSegue" id="OVN-xr-QyH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -318,6 +319,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ft1-iZ-SpS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1489" y="82"/>
+        </scene>
+        <!--reminder-->
+        <scene sceneID="LWD-ns-asF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Jesi" referencedIdentifier="reminder" id="mtO-1v-9kd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="WK0-Hu-6K1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BZf-IL-JBe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="487" y="-343"/>
         </scene>
     </scenes>
     <resources>

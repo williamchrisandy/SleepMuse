@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import CoreData
 
 class StartBreathingViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
@@ -16,7 +17,6 @@ class StartBreathingViewController: UIViewController, UIPickerViewDataSource, UI
     // Outlets
     @IBOutlet weak var musicPicker: UIPickerView!
     @IBOutlet weak var musicTimerDatePicker: UIDatePicker!
-    
     @IBOutlet weak var startBreathingButton: UIButton!
     
     // Color Constants
@@ -35,6 +35,9 @@ class StartBreathingViewController: UIViewController, UIPickerViewDataSource, UI
     public var passMusicAudio: String?
     public var passTotalMusicRepeat: Int?
     
+    let standardUserDefault = UserDefaults.standard
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,7 +51,35 @@ class StartBreathingViewController: UIViewController, UIPickerViewDataSource, UI
         musicTimerDatePicker.minuteInterval = 15
         
         self.musicTimerDatePicker?.addTarget(self, action: #selector(datePickedValueChanged), for: .valueChanged)
-        musicTimerDatePicker.countDownDuration = 2
+        musicPicker.selectRow(standardUserDefault.integer(forKey: keyLastMusicRow), inComponent: 0, animated: true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.visibleViewController?.navigationItem.title = ""
+        
+        let settingsButton = UIBarButtonItem.init(image: UIImage(systemName: "gearshape.fill"), style: .done, target: self, action: #selector(self.openSetting(_:)))
+        settingsButton.tintColor = UIColor.white
+        self.navigationController?.visibleViewController?.navigationItem.setRightBarButton(settingsButton, animated: false)
+        
+        updateViews()
+        NotificationCenter.default.addObserver(self, selector: #selector(applicationWillEnterForeground(_:)), name: UIApplication.willEnterForegroundNotification, object: UIApplication.shared)
+    }
+    
+    @objc func applicationWillEnterForeground(_ notification: NSNotification)
+    {
+        updateViews()
+    }
+    
+    func updateViews()
+    {
+        musicTimerDatePicker.countDownDuration = standardUserDefault.double(forKey: keyFallAsleepDuration)
+    }
+    
+    @IBAction func openSetting(_ sender: UIButton)
+    {
+        performSegue(withIdentifier: "goToReminderSegue", sender: self)
     }
     
     @IBAction func startBreathingButtonPressed(_ sender: UIButton) {
@@ -96,8 +127,8 @@ class StartBreathingViewController: UIViewController, UIPickerViewDataSource, UI
     
     // Contoh Kodingan untuk Membatasi Pilihan Waktu Music Timer
     @objc func datePickedValueChanged (sender: UIDatePicker) {
-        if (self.musicTimerDatePicker.countDownDuration > 7200) { //5400 seconds = 1h30min
-            self.musicTimerDatePicker.countDownDuration = 900.0; //Defaults to 1 minute
+        if (self.musicTimerDatePicker.countDownDuration > 7200) { //7200 seconds = 2h
+            self.musicTimerDatePicker.countDownDuration = 7200; //Back to 2h
         }
         print("Test DatePickedValueChanged")
     }
@@ -110,9 +141,39 @@ class StartBreathingViewController: UIViewController, UIPickerViewDataSource, UI
     {
         if segue.identifier == "goToBreathingSession"
         {
+            self.navigationController?.isNavigationBarHidden = true
             let destination = segue.destination as! BreathingSessionViewController
             destination.pickedMusicData = pickedMusic
+            
+            standardUserDefault.set(musicPicker.selectedRow(inComponent: 0), forKey: keyLastMusicRow)
+            standardUserDefault.set(musicTimerDatePicker.countDownDuration, forKey: keyFallAsleepDuration)
+            
+            let context = self.appDelegate.persistentContainer.viewContext
+            do
+            {
+                let session = Session(context: context)
+                session.duration = pickedMusic?.chosenMusicTimer ?? 3600.00
+                session.startTime = Date()
+                
+                let music = Music(context: context)
+                music.title = musicDataArray[self.selectedMusicRow].musicName
+                music.fileName = musicDataArray[self.selectedMusicRow].musicAudio
+                
+                session.with = music
+                
+                context.insert(session)
+                try context.save()
+            }
+            catch let error
+            {
+                print(error.localizedDescription)
+            }
+        }
+        else if segue.identifier == "goToReminderSegue"
+        {
+            self.navigationController?.visibleViewController?.navigationItem.title = "Exercise"
+            let destination = segue.destination as! SelectBedtimeReminderViewController
+            destination.type = "Edit"
         }
     }
-
 }
