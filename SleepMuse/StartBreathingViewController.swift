@@ -72,7 +72,7 @@ class StartBreathingViewController: UIViewController, UIPickerViewDataSource, UI
         
         
         // The StartBreathingViewController Changes to the BreathingSessionViewController (Using Segue)
-//        performSegue(withIdentifier: "goToBreathingSession", sender: self)
+        performSegue(withIdentifier: "goToBreathingSession", sender: self)
     }
     
     // Functions for Customizing the "Choose the Music" Picker View
