@@ -413,19 +413,25 @@
                     <connections>
                         <outlet property="collectionViewDaily" destination="A1q-BT-oOa" id="GQ5-E8-dIc"/>
                         <outlet property="collectionViewWeekly" destination="86H-gT-wjf" id="dlh-Bp-eTD"/>
+                        <outlet property="labelRecentDuration" destination="611-FJ-oWL" id="vWH-6A-yiM"/>
+                        <outlet property="labelRecentMusic" destination="dP6-VS-iHb" id="1BO-jc-GzS"/>
+                        <outlet property="labelRecentStartTime" destination="stE-Nf-C1M" id="9qw-jo-ZHg"/>
                         <outlet property="pageControlDaily" destination="fvf-Jm-lNn" id="tNj-Q5-ujO"/>
                         <outlet property="pageControlWeekly" destination="jGN-cL-TTb" id="bh0-po-aTW"/>
                         <outlet property="viewRecent" destination="d01-HF-T7I" id="LXg-LV-59Y"/>
+                        <segue destination="psr-k7-kMZ" kind="show" identifier="goToReminderSegue" id="HWB-g5-0fT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="16.875" y="79.225352112676063"/>
         </scene>
-        <!--Jesi-->
+        <!--reminder-->
         <scene sceneID="DAx-Hk-8ic">
             <objects>
-                <viewControllerPlaceholder storyboardName="Jesi" id="psr-k7-kMZ" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Jesi" referencedIdentifier="reminder" id="psr-k7-kMZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mub-xB-DoZ"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g1n-2r-FAO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="625" y="-67"/>

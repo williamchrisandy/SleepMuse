@@ -12,6 +12,9 @@ import CoreData
 class HistoryViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
 {
     @IBOutlet weak var viewRecent: UIView!
+    @IBOutlet weak var labelRecentMusic: UILabel!
+    @IBOutlet weak var labelRecentDuration: UILabel!
+    @IBOutlet weak var labelRecentStartTime: UILabel!
     @IBOutlet weak var collectionViewDaily: UICollectionView!
     @IBOutlet weak var collectionViewWeekly: UICollectionView!
     @IBOutlet weak var pageControlDaily: UIPageControl!
@@ -29,10 +32,7 @@ class HistoryViewController: UIViewController, UICollectionViewDataSource, UICol
         viewRecent.layer.cornerRadius = 20
         collectionViewDaily.layer.cornerRadius = 20
         collectionViewWeekly.layer.cornerRadius = 20
-        pageControlDaily.numberOfPages = 3
-        pageControlWeekly.numberOfPages = 3
-        
-        
+
         context = appDelegate.persistentContainer.viewContext
     }
 
@@ -58,13 +58,31 @@ class HistoryViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func getSessionData()
     {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH.mm"
+        let dateString = UserDefaults.standard.string(forKey: keyNotificationTime) ?? "00.00"
+        let date = dateFormatter.date(from: dateString)
+        
+        
         do
         {
-            let fetchRequest: NSFetchRequest<Session> = Session.fetchRequest(since: Date())
+            let fetchRequest: NSFetchRequest<Session> = Session.fetchRequest(since: date!)
             let result = try context?.fetch(fetchRequest)
-//            arrayProduct = result
-            collectionViewDaily.reloadData()
-            collectionViewWeekly.reloadData()
+            
+            if result?.isEmpty == false
+            {
+                labelRecentMusic.text = result?[0].with?.title
+                labelRecentDuration.text = StaticFunction.createDurationString((result?[0].duration)!)
+                labelRecentStartTime.text = StaticFunction.dateToTimeString((result?[0].startTime)!)
+                
+                
+                
+                pageControlDaily.numberOfPages = 3//arraySessionDaily.count
+                pageControlWeekly.numberOfPages = 3//arraySessionWeekly.count
+                
+                collectionViewDaily.reloadData()
+                collectionViewWeekly.reloadData()
+            }
         }
         catch let error
         {
@@ -74,13 +92,17 @@ class HistoryViewController: UIViewController, UICollectionViewDataSource, UICol
     
     @IBAction func openSetting(_ sender: UIButton)
     {
+        performSegue(withIdentifier: "goToReminderSegue", sender: self)
+        /*
+        // To Settings
         let app = UIApplication.shared
         let url = URL(string: UIApplication.openSettingsURLString)!
-        
+
         if app.canOpenURL(url)
         {
             app.open(url, completionHandler: nil)
         }
+         */
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int

@@ -44,7 +44,7 @@
 			<key>Key</key>
 			<string>fallAsleepDuration</string>
 			<key>DefaultValue</key>
-			<integer>60</integer>
+			<integer>3600</integer>
 			<key>Titles</key>
 			<array>
 				<string>15 minutes</string>
@@ -58,14 +58,14 @@
 			</array>
 			<key>Values</key>
 			<array>
-				<integer>15</integer>
-				<integer>30</integer>
-				<integer>45</integer>
-				<integer>60</integer>
-				<integer>75</integer>
-				<integer>90</integer>
-				<integer>105</integer>
-				<integer>120</integer>
+				<integer>900</integer>
+				<integer>1800</integer>
+				<integer>2700</integer>
+				<integer>3600</integer>
+				<integer>4500</integer>
+				<integer>5400</integer>
+				<integer>6300</integer>
+				<integer>7200</integer>
 			</array>
 		</dict>
 		<dict>
@@ -82,7 +82,7 @@
 			<key>Key</key>
 			<string>notificationOn</string>
 			<key>DefaultValue</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Type</key>

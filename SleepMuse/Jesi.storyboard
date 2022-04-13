@@ -60,6 +60,7 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="insertNameFieldUsed:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="vYd-jK-9bq"/>
+                                    <action selector="textFieldDidEndOnExit:" destination="Y6W-OH-hqX" eventType="editingDidEndOnExit" id="6sP-Mt-aHN"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGi-mi-f80">
@@ -125,7 +126,7 @@
                                 <color key="textColor" red="0.94901960780000005" green="0.8980392157" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="15" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTe-aQ-RIQ">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="3600" minuteInterval="15" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTe-aQ-RIQ">
                                 <rect key="frame" x="24" y="242" width="342" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="jlW-gw-kIy"/>
@@ -218,7 +219,7 @@
         <!--Select Bedtime Reminder View Controller-->
         <scene sceneID="QSG-fv-C9t">
             <objects>
-                <viewController id="ho7-SX-qmt" customClass="SelectBedtimeReminderViewController" customModule="SleepMuse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="reminder" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ho7-SX-qmt" customClass="SelectBedtimeReminderViewController" customModule="SleepMuse" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hip-ZX-EYu">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -255,9 +256,15 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="qlB-Vb-aAC"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="timeChanged:" destination="ho7-SX-qmt" eventType="valueChanged" id="wQk-V8-EZm"/>
+                                </connections>
                             </datePicker>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uoy-zY-f6e">
                                 <rect key="frame" x="317" y="435.66666666666669" width="51" height="31"/>
+                                <connections>
+                                    <action selector="notificationOnChanged:" destination="ho7-SX-qmt" eventType="valueChanged" id="u2m-al-ZK6"/>
+                                </connections>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysK-tK-oCU">
                                 <rect key="frame" x="306.33333333333331" y="755.66666666666663" width="59.666666666666686" height="34.333333333333371"/>
@@ -270,11 +277,11 @@
                                     <segue destination="ssQ-ut-sJ8" kind="show" identifier="nextPageSetUpComplete" id="Hrr-dZ-R5H"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="WHX-ab-EEW">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WHX-ab-EEW">
                                 <rect key="frame" x="24" y="372.66666666666669" width="342" height="35"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJs-Ok-xs6">
-                                        <rect key="frame" x="0.0" y="0.0" width="52.333333333333336" height="35"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="49" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="M Digit" title=""/>
                                         <connections>
@@ -282,7 +289,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sL-af-BpM">
-                                        <rect key="frame" x="52.333333333333329" y="0.0" width="47" height="35"/>
+                                        <rect key="frame" x="49" y="0.0" width="48.666666666666657" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="T Digit" title=""/>
                                         <connections>
@@ -290,7 +297,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7u-NH-Gkg">
-                                        <rect key="frame" x="99.333333333333329" y="0.0" width="54.999999999999986" height="35"/>
+                                        <rect key="frame" x="97.666666666666671" y="0.0" width="49.000000000000014" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="W Digit" title=""/>
                                         <connections>
@@ -298,7 +305,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r37-rN-PLh">
-                                        <rect key="frame" x="154.33333333333334" y="0.0" width="47" height="35"/>
+                                        <rect key="frame" x="146.66666666666666" y="0.0" width="48.666666666666657" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="T Digit" title=""/>
                                         <connections>
@@ -306,7 +313,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2sf-2d-8Fw">
-                                        <rect key="frame" x="201.33333333333334" y="0.0" width="46.666666666666657" height="35"/>
+                                        <rect key="frame" x="195.33333333333334" y="0.0" width="49" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="F Digit" title=""/>
                                         <connections>
@@ -314,7 +321,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="umA-hn-PAw">
-                                        <rect key="frame" x="248" y="0.0" width="47" height="35"/>
+                                        <rect key="frame" x="244.33333333333329" y="0.0" width="48.666666666666657" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="S Digit" title=""/>
                                         <connections>
@@ -322,7 +329,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfw-dc-g9z">
-                                        <rect key="frame" x="295" y="0.0" width="47" height="35"/>
+                                        <rect key="frame" x="293" y="0.0" width="49" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="S Digit" title=""/>
                                         <connections>
@@ -380,8 +387,11 @@
                     <connections>
                         <outlet property="fridayButton" destination="2sf-2d-8Fw" id="Jub-Oq-vYn"/>
                         <outlet property="mondayButton" destination="EJs-Ok-xs6" id="T22-1f-vh9"/>
+                        <outlet property="nextButton" destination="ysK-tK-oCU" id="jfe-g0-Pfg"/>
+                        <outlet property="notificationToggle" destination="Uoy-zY-f6e" id="sbh-4M-bXd"/>
                         <outlet property="saturdayButton" destination="umA-hn-PAw" id="QUT-YX-FtP"/>
-                        <outlet property="selectReminderTimePIcker" destination="VmP-jG-jPT" id="Qf5-Ld-JfI"/>
+                        <outlet property="selectReminderTimePicker" destination="VmP-jG-jPT" id="Qf5-Ld-JfI"/>
+                        <outlet property="skipButton" destination="x2a-Jg-dIi" id="B1N-5Q-ba6"/>
                         <outlet property="sundayButton" destination="Vfw-dc-g9z" id="61g-wo-Q7X"/>
                         <outlet property="thursdayButton" destination="r37-rN-PLh" id="sR5-IG-F4K"/>
                         <outlet property="tuesdayButton" destination="6sL-af-BpM" id="4aR-UY-oRL"/>
@@ -472,7 +482,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QqG-zv-JtN"/>
+        <segue reference="y8J-c1-Owe"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="SleepMuse Primary Text Color"/>
     <resources>

@@ -93,6 +93,7 @@
             <point key="canvasLocation" x="15" y="-15"/>
         </scene>
     </scenes>
+    <color key="tintColor" name="SleepMuse Primary Text Color"/>
     <resources>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="moon.fill" catalog="system" width="128" height="121"/>
@@ -101,6 +102,9 @@
         </namedColor>
         <namedColor name="SleepMuse Primary Color">
             <color red="0.24313725490196078" green="0.22352941176470589" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SleepMuse Primary Text Color">
+            <color red="0.94901960784313721" green="0.89803921568627454" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
