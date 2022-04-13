@@ -240,8 +240,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="huN-Be-8Y9"/>
                     <connections>
+                        <outlet property="breatheLabel" destination="Sa1-Jx-Q36" id="AQW-5x-p6d"/>
                         <outlet property="breatheProgressBar" destination="8fH-Rk-Ydb" id="KRZ-x7-ZrD"/>
                         <outlet property="currentProgressLabel" destination="MFf-3C-Kyw" id="jS2-3i-SE2"/>
+                        <outlet property="moonGlowView" destination="c46-Sf-Fe9" id="mnu-N4-KIv"/>
                         <outlet property="muteInstructorButton" destination="Tx8-U5-clL" id="MqU-nW-Ykf"/>
                         <outlet property="muteMusicButton" destination="acC-NY-Pc1" id="2aa-VJ-13A"/>
                         <outlet property="pauseBreathingButton" destination="ZQq-3O-hd4" id="iCM-o3-m2u"/>
