@@ -32,10 +32,7 @@ class HistoryViewController: UIViewController, UICollectionViewDataSource, UICol
         viewRecent.layer.cornerRadius = 20
         collectionViewDaily.layer.cornerRadius = 20
         collectionViewWeekly.layer.cornerRadius = 20
-        pageControlDaily.numberOfPages = 3
-        pageControlWeekly.numberOfPages = 3
 
-        
         context = appDelegate.persistentContainer.viewContext
     }
 
@@ -61,13 +58,31 @@ class HistoryViewController: UIViewController, UICollectionViewDataSource, UICol
     
     func getSessionData()
     {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH.mm"
+        let dateString = UserDefaults.standard.string(forKey: keyNotificationTime) ?? "00.00"
+        let date = dateFormatter.date(from: dateString)
+        
+        
         do
         {
-            let fetchRequest: NSFetchRequest<Session> = Session.fetchRequest(since: Date())
+            let fetchRequest: NSFetchRequest<Session> = Session.fetchRequest(since: date!)
             let result = try context?.fetch(fetchRequest)
             
-            collectionViewDaily.reloadData()
-            collectionViewWeekly.reloadData()
+            if result?.isEmpty == false
+            {
+                labelRecentMusic.text = result?[0].with?.title
+                labelRecentDuration.text = StaticFunction.createDurationString((result?[0].duration)!)
+                labelRecentStartTime.text = StaticFunction.dateToTimeString((result?[0].startTime)!)
+                
+                
+                
+                pageControlDaily.numberOfPages = 3//arraySessionDaily.count
+                pageControlWeekly.numberOfPages = 3//arraySessionWeekly.count
+                
+                collectionViewDaily.reloadData()
+                collectionViewWeekly.reloadData()
+            }
         }
         catch let error
         {

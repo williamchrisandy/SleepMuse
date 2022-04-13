@@ -111,9 +111,7 @@ class SelectBedtimeReminderViewController: UIViewController
     
     @IBAction func timeChanged(_ sender: UIDatePicker)
     {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HH.mm"
-        standardUserDefault.set(dateFormatter.string(from:sender.date), forKey: keyNotificationTime)
+        standardUserDefault.set(StaticFunction.dateToTimeString(sender.date), forKey: keyNotificationTime)
     }
     
     @IBAction func mondayButtonPressed(_ sender: UIButton)
