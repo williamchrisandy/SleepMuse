@@ -45,6 +45,7 @@
 		5770555E2805AE1B007065D3 /* ModelAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770555D2805AE1B007065D3 /* ModelAudioPlayer.swift */; };
 		577055602805AE46007065D3 /* MusicData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770555F2805AE46007065D3 /* MusicData.swift */; };
 		577055622805AE5F007065D3 /* PickedMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577055612805AE5F007065D3 /* PickedMusic.swift */; };
+		578D19D4280769BF0028652F /* ModelTwoAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578D19D3280769BF0028652F /* ModelTwoAudioPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		5770555D2805AE1B007065D3 /* ModelAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAudioPlayer.swift; sourceTree = "<group>"; };
 		5770555F2805AE46007065D3 /* MusicData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicData.swift; sourceTree = "<group>"; };
 		577055612805AE5F007065D3 /* PickedMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickedMusic.swift; sourceTree = "<group>"; };
+		578D19D3280769BF0028652F /* ModelTwoAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTwoAudioPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				3B202A6327FEC2B900A58166 /* BreathingSessionDoneViewController.swift */,
 				3BFB776D27FFE6BF0062B58B /* Constants.swift */,
 				5770555D2805AE1B007065D3 /* ModelAudioPlayer.swift */,
+				578D19D3280769BF0028652F /* ModelTwoAudioPlayer.swift */,
 				5770555F2805AE46007065D3 /* MusicData.swift */,
 				577055612805AE5F007065D3 /* PickedMusic.swift */,
 				3B202A3B27FEA45300A58166 /* Assets.xcassets */,
@@ -282,6 +285,7 @@
 				3B202A3027FEA45200A58166 /* AppDelegate.swift in Sources */,
 				3B02C8222805338E009E3D26 /* Session+CoreDataClass.swift in Sources */,
 				3B202A3227FEA45200A58166 /* SceneDelegate.swift in Sources */,
+				578D19D4280769BF0028652F /* ModelTwoAudioPlayer.swift in Sources */,
 				577055622805AE5F007065D3 /* PickedMusic.swift in Sources */,
 				3B202A6227FEC29600A58166 /* BreathingSessionViewController.swift in Sources */,
 				3B202A5A27FEC1F400A58166 /* SetUpCompleteViewController.swift in Sources */,

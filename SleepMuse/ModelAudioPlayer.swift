@@ -42,6 +42,7 @@ struct ModelAudioPlayer {
                 }
                 player.play()
                 player.numberOfLoops = totalMusicRepeat
+                player.setVolume(2.0, fadeDuration: 0)
 
             } catch {
                 print("Something went wrong")
