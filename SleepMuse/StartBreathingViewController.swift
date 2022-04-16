@@ -15,6 +15,8 @@ class StartBreathingViewController: UIViewController, UIPickerViewDataSource, UI
     var modelAudioPlayer = ModelAudioPlayer()
     
     // Outlets
+    @IBOutlet weak var labelGreeting: UILabel!
+    @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var musicPicker: UIPickerView!
     @IBOutlet weak var musicTimerDatePicker: UIDatePicker!
     @IBOutlet weak var startBreathingButton: UIButton!
@@ -74,6 +76,8 @@ class StartBreathingViewController: UIViewController, UIPickerViewDataSource, UI
     
     func updateViews()
     {
+        labelGreeting.text = "Good \(StaticFunction.dateToPartOfDayString(Date()))"
+        labelName.text = standardUserDefault.string(forKey: keyNickname)
         musicTimerDatePicker.countDownDuration = standardUserDefault.double(forKey: keyFallAsleepDuration)
     }
     
@@ -174,6 +178,18 @@ class StartBreathingViewController: UIViewController, UIPickerViewDataSource, UI
             self.navigationController?.visibleViewController?.navigationItem.title = "Exercise"
             let destination = segue.destination as! SelectBedtimeReminderViewController
             destination.type = "Edit"
+        }
+    }
+    
+    @IBAction func returned(segue: UIStoryboardSegue)
+    {
+        if segue.identifier == "sessionFinishedComplete"
+        {
+            
+        }
+        else if segue.identifier == "sessionFinishedIncomplete"
+        {
+            
         }
     }
 }

@@ -13,30 +13,6 @@ class StaticFunction
     static func setUpCompleted()
     {
         UserDefaults.standard.set(true, forKey: keyFirstTime)
-        
-        //Dummy Data
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        
-        do
-        {
-            let session = Session(context: context)
-            session.duration = 3600.00
-            session.startTime = Date()
-            
-            let music = Music(context: context)
-            music.title = musicDataArray[1].musicName
-            music.fileName = musicDataArray[3].musicAudio
-            
-            session.with = music
-            
-            context.insert(session)
-            try context.save()
-        }
-        catch let error
-        {
-            print(error.localizedDescription)
-        }
     }
     
     static func createDurationString(_ duration: Double) -> String
@@ -62,9 +38,53 @@ class StaticFunction
         dateFormatter.dateFormat = "HH.mm"
         return dateFormatter.string(from:date)
     }
+    
+    static func dateToPartOfDayString(_ date: Date) -> String
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH"
+        let hour = dateFormatter.string(from: date)
+        if hour <= "06"
+        {
+            return "Night"
+        }
+        else if hour <= "12"
+        {
+            return "Morning"
+        }
+        else if hour <= "18"
+        {
+            return "Afternoon"
+        }
+        else if hour <= "22"
+        {
+            return "Evening"
+        }
+        else
+        {
+            return "Night"
+        }
+    }
+    
+    static func dateToHourString(_ date: Date) -> String
+    {
+        // 6 12 6 10
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "H"
+        return dateFormatter.string(from: date)
+    }
+    
+    static func dateToDayAndMonthString(_ date: Date) -> String
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM dd"
+        return dateFormatter.string(from:date)
+    }
+    
+    static func dateToNameOfDay(_ date: Date) -> String
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        return dateFormatter.string(from:date)
+    }
 }
-
-/*
-    //DUMP
- 
- */

@@ -244,7 +244,8 @@ class BreathingSessionViewController: UIViewController
         instructorVoicePlayer.player?.stop()
         twoAudioPlayer.musicPlayer?.stop()
         twoAudioPlayer.voicePlayer?.stop()
-        dismiss(animated: true, completion: nil)
+//        dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "sessionFinishedIncomplete", sender: self)
     }
     
     @IBAction func pauseBreathingButtonPressed(_ sender: UIButton) {

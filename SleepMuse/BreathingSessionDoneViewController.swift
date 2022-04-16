@@ -27,7 +27,8 @@ class BreathingSessionDoneViewController: UIViewController
     
     @IBAction func closeButtonPressed(_ sender: Any) {
         musicPlayer.player?.stop()
-        dismiss(animated: true, completion: nil)
+//        dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "sessionFinishedComplete", sender: self)
     }
     
 

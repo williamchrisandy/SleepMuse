@@ -10,15 +10,13 @@ import Foundation
 class SessionSection
 {
     var startDate: Date
-    var endDate: Date
-    var totalDuration: Int
+    var totalDuration: Double
     var startTime: [Int]
     var dataCount: Int
     
-    init (startDate: Date, endDate: Date)
+    init (startDate: Date)
     {
         self.startDate = startDate
-        self.endDate = endDate
         totalDuration = 0
         startTime = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
         dataCount = 0
