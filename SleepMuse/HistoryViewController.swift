@@ -93,21 +93,23 @@ class HistoryViewController: UIViewController, UICollectionViewDataSource, UICol
                 var dayIndex = 6, weekIndex = 6
                 for session in result!
                 {
-                    while session.startTime! < arraySessionDaily[dayIndex].startDate
+                    while dayIndex >= 0 && session.startTime! < arraySessionDaily[dayIndex].startDate
                     {
                         dayIndex -= 1
                     }
-                    var targetData = arraySessionDaily[dayIndex]
-                    targetData.dataCount += 1
-                    targetData.totalDuration += session.duration
-                    targetData.startTime[Int(StaticFunction.dateToHourString(session.startTime!))!] += 1;
-                    
+                    if dayIndex >= 0
+                    {
+                        let targetData = arraySessionDaily[dayIndex]
+                        targetData.dataCount += 1
+                        targetData.totalDuration += session.duration
+                        targetData.startTime[Int(StaticFunction.dateToHourString(session.startTime!))!] += 1;
+                    }
                     
                     while session.startTime! < arraySessionWeekly[weekIndex].startDate
                     {
                         weekIndex -= 1
                     }
-                    targetData = arraySessionWeekly[weekIndex]
+                    let targetData = arraySessionWeekly[weekIndex]
                     targetData.dataCount += 1
                     targetData.totalDuration += session.duration
                     targetData.startTime[Int(StaticFunction.dateToHourString(session.startTime!))!] += 1;
@@ -250,5 +252,15 @@ class HistoryViewController: UIViewController, UICollectionViewDataSource, UICol
     @IBAction func pageControlValueChanged(_ sender: UIPageControl)
     {
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "goToReminderSegue"
+        {
+            self.navigationController?.visibleViewController?.navigationItem.title = "History"
+            let destination = segue.destination as! SelectBedtimeReminderViewController
+            destination.type = "Edit"
+        }
     }
 }
