@@ -84,7 +84,7 @@ class HistoryViewController: UIViewController, UICollectionViewDataSource, UICol
             let fetchRequest: NSFetchRequest<Session> = Session.fetchRequest(since: startDate)
             let result = try context?.fetch(fetchRequest)
             
-            if result != nil || result?.isEmpty == false
+            if result != nil && result?.isEmpty == false
             {
                 labelRecentMusic.text = result![0].with?.title
                 labelRecentDuration.text = StaticFunction.createDurationString((result![0].duration))
