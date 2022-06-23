@@ -196,7 +196,7 @@ class HistoryViewController: UIViewController, UICollectionViewDataSource, UICol
             let selectedHour = maxIndex < 10 ? "0\(maxIndex)" : "\(maxIndex)"
             cell.labelAverageStartTime.text = "\(selectedHour).00 - \(selectedHour).59"
             
-            if indexPath.row != 0
+            if indexPath.item != 0
             {
                 let previousData = collectionView == collectionViewDaily ? arraySessionDaily[indexPath.item - 1] : arraySessionWeekly[indexPath.item - 1]
                 if previousData.dataCount != 0
@@ -239,13 +239,13 @@ class HistoryViewController: UIViewController, UICollectionViewDataSource, UICol
         let visibleRectangleDaily = CGRect(origin: collectionViewDaily.contentOffset, size: collectionViewDaily.bounds.size)
         if let visibleIndexPath = self.collectionViewDaily.indexPathForItem(at: CGPoint(x: visibleRectangleDaily.midX, y: visibleRectangleDaily.midY))
         {
-            pageControlDaily.currentPage = visibleIndexPath.row
+            pageControlDaily.currentPage = visibleIndexPath.item
         }
         
         let visibleRectangleWeekly = CGRect(origin: collectionViewWeekly.contentOffset, size: collectionViewWeekly.bounds.size)
         if let visibleIndexPath = self.collectionViewWeekly.indexPathForItem(at: CGPoint(x: visibleRectangleWeekly.midX, y: visibleRectangleWeekly.midY))
         {
-            pageControlWeekly.currentPage = visibleIndexPath.row
+            pageControlWeekly.currentPage = visibleIndexPath.item
         }
     }
     
