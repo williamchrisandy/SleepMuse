@@ -89,21 +89,15 @@ class StartBreathingViewController: UIViewController, UIPickerViewDataSource, UI
     @IBAction func startBreathingButtonPressed(_ sender: UIButton) {
         // Selected Music
         self.selectedMusicRow = musicPicker.selectedRow(inComponent: 0)
-        let musicName = musicDataArray[self.selectedMusicRow].musicName
         let musicAudio = musicDataArray[self.selectedMusicRow].musicAudio
-        print("The Music Name : \(musicName)")
-        print("The Music Audio : \(musicAudio)")
         
         // Selected Music Timer (Using Date Picker - Count Down Timer)
         let selectedMusicTimer = musicTimerDatePicker.countDownDuration
-        print("selectedMusicTimer : \(selectedMusicTimer)")
         
         // Calculate the Repeat of the Music
         let totalMusicRepeat = selectedMusicTimer / 60
-        print("Total Music Repeat : \(totalMusicRepeat)")
         
         pickedMusic = PickedMusic(chosenMusicAudio: musicAudio, chosenMusicTimer: selectedMusicTimer, chosenMusicRepeat: totalMusicRepeat)
-        print("pickedMusic : \(String(describing: pickedMusic))")
         
         
         // The StartBreathingViewController Changes to the BreathingSessionViewController (Using Segue)
@@ -134,7 +128,6 @@ class StartBreathingViewController: UIViewController, UIPickerViewDataSource, UI
         if (self.musicTimerDatePicker.countDownDuration > 7200) { //7200 seconds = 2h
             self.musicTimerDatePicker.countDownDuration = 7200; //Back to 2h
         }
-        print("Test DatePickedValueChanged")
     }
 
 

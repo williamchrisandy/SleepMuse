@@ -296,6 +296,7 @@
                         <outlet property="muteInstructorButton" destination="Tx8-U5-clL" id="MqU-nW-Ykf"/>
                         <outlet property="muteMusicButton" destination="acC-NY-Pc1" id="2aa-VJ-13A"/>
                         <outlet property="pauseBreathingButton" destination="ZQq-3O-hd4" id="iCM-o3-m2u"/>
+                        <outlet property="totalTimeLabel" destination="0jB-bW-F77" id="j53-76-gRd"/>
                         <segue destination="hrw-q4-AMc" kind="show" identifier="goToBreathingSessionDone" id="Apl-FM-jr9"/>
                         <segue destination="rKT-jF-OX3" kind="unwind" identifier="sessionFinishedIncomplete" unwindAction="returnedWithSegue:" id="ORq-eV-utd"/>
                     </connections>

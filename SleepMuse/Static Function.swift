@@ -87,4 +87,13 @@ class StaticFunction
         dateFormatter.dateFormat = "EEEE"
         return dateFormatter.string(from:date)
     }
+    
+    static func secondToHHMMSS(_ totalSecond: Int) -> String
+    {
+        let hour = totalSecond / 3600
+        let minute = (totalSecond % 3600) / 60
+        let second = totalSecond % 60
+        
+        return String(format: "%.2d:%.2d:%.2d", hour, minute, second)
+    }
 }

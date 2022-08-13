@@ -18,7 +18,7 @@
 		3B202A3A27FEA45200A58166 /* SleepMuse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A3827FEA45200A58166 /* SleepMuse.xcdatamodeld */; };
 		3B202A3C27FEA45300A58166 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B202A3B27FEA45300A58166 /* Assets.xcassets */; };
 		3B202A3F27FEA45300A58166 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B202A3D27FEA45300A58166 /* LaunchScreen.storyboard */; };
-		3B202A4C27FEC04100A58166 /* Qhanza.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B202A4B27FEC04100A58166 /* Qhanza.storyboard */; };
+		3B202A4C27FEC04100A58166 /* Qhansa.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B202A4B27FEC04100A58166 /* Qhansa.storyboard */; };
 		3B202A4E27FEC04F00A58166 /* William.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B202A4D27FEC04F00A58166 /* William.storyboard */; };
 		3B202A5027FEC06400A58166 /* Jesi.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B202A4F27FEC06400A58166 /* Jesi.storyboard */; };
 		3B202A5227FEC09F00A58166 /* InsertNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B202A5127FEC09F00A58166 /* InsertNameViewController.swift */; };
@@ -64,7 +64,7 @@
 		3B202A3B27FEA45300A58166 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B202A3E27FEA45300A58166 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B202A4027FEA45300A58166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B202A4B27FEC04100A58166 /* Qhanza.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Qhanza.storyboard; sourceTree = "<group>"; };
+		3B202A4B27FEC04100A58166 /* Qhansa.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Qhansa.storyboard; sourceTree = "<group>"; };
 		3B202A4D27FEC04F00A58166 /* William.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = William.storyboard; sourceTree = "<group>"; };
 		3B202A4F27FEC06400A58166 /* Jesi.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Jesi.storyboard; sourceTree = "<group>"; };
 		3B202A5127FEC09F00A58166 /* InsertNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertNameViewController.swift; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 				3B202A3B27FEA45300A58166 /* Assets.xcassets */,
 				3B202A3527FEA45200A58166 /* Main.storyboard */,
 				3B202A3D27FEA45300A58166 /* LaunchScreen.storyboard */,
-				3B202A4B27FEC04100A58166 /* Qhanza.storyboard */,
+				3B202A4B27FEC04100A58166 /* Qhansa.storyboard */,
 				3B202A4D27FEC04F00A58166 /* William.storyboard */,
 				3B202A4F27FEC06400A58166 /* Jesi.storyboard */,
 				3B202A4027FEA45300A58166 /* Info.plist */,
@@ -259,7 +259,7 @@
 				3B202A3C27FEA45300A58166 /* Assets.xcassets in Resources */,
 				3B202A3727FEA45200A58166 /* Main.storyboard in Resources */,
 				3B80AC732806960A005DDA4A /* fast river.mp3 in Resources */,
-				3B202A4C27FEC04100A58166 /* Qhanza.storyboard in Resources */,
+				3B202A4C27FEC04100A58166 /* Qhansa.storyboard in Resources */,
 				3BFB776C27FFE3E40062B58B /* Settings.bundle in Resources */,
 				3B80AC722806960A005DDA4A /* rain thunder.mp3 in Resources */,
 				3B80AC6F2806960A005DDA4A /* ocean waves.mp3 in Resources */,
