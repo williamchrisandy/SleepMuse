@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="-918" y="-16"/>
         </scene>
-        <!--Qhanza-->
+        <!--Qhansa-->
         <scene sceneID="nhV-5B-YQ6">
             <objects>
-                <viewControllerPlaceholder storyboardName="Qhanza" id="lDz-gh-ftE" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Qhansa" id="lDz-gh-ftE" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Exercise" image="moon.fill" catalog="system" id="1w9-NR-mal"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IiR-Jr-WDA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -68,48 +68,6 @@
 				<integer>7200</integer>
 			</array>
 		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-			<key>Title</key>
-			<string>Bedtime Reminder</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
-			<key>Title</key>
-			<string>Notification On/Off</string>
-			<key>Key</key>
-			<string>notificationOn</string>
-			<key>DefaultValue</key>
-			<false/>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSTextFieldSpecifier</string>
-			<key>Title</key>
-			<string>Time (hh.mm)</string>
-			<key>Key</key>
-			<string>notificationTime</string>
-			<key>DefaultValue</key>
-			<string>22.22</string>
-			<key>IsSecure</key>
-			<false/>
-			<key>KeyboardType</key>
-			<string>NumbersAndPunctuation</string>
-			<key>AutocapitalizationType</key>
-			<string>None</string>
-			<key>AutocorrectionType</key>
-			<string>No</string>
-		</dict>
-		<dict>
-			<key>Type</key>
-			<string>PSChildPaneSpecifier</string>
-			<key>Title</key>
-			<string>Repeat</string>
-			<key>File</key>
-			<string>Repeat</string>
-		</dict>
 	</array>
 </dict>
 </plist>

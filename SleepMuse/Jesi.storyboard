@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -54,9 +55,10 @@
                                     <segue destination="iCT-M8-tEI" kind="show" identifier="skipPageBreathingSession" animates="NO" id="XRN-me-oz0"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert Your Nickname" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bN8-uA-w48">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert Your Nickname" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bN8-uA-w48">
                                 <rect key="frame" x="24" y="283" width="342" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="backgroundColor" name="SleepMuse Gradient Text Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="insertNameFieldUsed:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="vYd-jK-9bq"/>
@@ -120,7 +122,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background Onboarding" translatesAutoresizingMaskIntoConstraints="NO" id="RCJ-N8-qX9">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long does it take for you take to fall aslep?" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjs-8w-rdf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long does it take for you take to fall asleep?" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjs-8w-rdf">
                                 <rect key="frame" x="24" y="104" width="342" height="122"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <color key="textColor" red="0.94901960780000005" green="0.8980392157" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -493,6 +495,9 @@
         <image name="T Digit" width="11" height="21"/>
         <image name="W Digit" width="17" height="21"/>
         <image name="bulan keju hepi" width="627" height="669"/>
+        <namedColor name="SleepMuse Gradient Text Color">
+            <color red="0.96862745098039216" green="0.96078431372549022" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="SleepMuse Primary Color">
             <color red="0.24313725490196078" green="0.22352941176470589" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

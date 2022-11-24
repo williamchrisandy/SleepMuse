@@ -25,6 +25,7 @@ class BreathingSessionViewController: UIViewController
     @IBOutlet weak var currentProgressLabel: UILabel!
     
     @IBOutlet weak var breatheLabel: UILabel!
+    @IBOutlet weak var totalTimeLabel: UILabel!
     @IBOutlet var moonGlowView: UIImageView!
     
     // Boolean for the Buttons
@@ -36,7 +37,91 @@ class BreathingSessionViewController: UIViewController
     // Initializers
     var currentProgress = 0
     var currentBreatheTime = 0
+    var time = 0
 
+    func playAndCheck(second: Double)
+    {
+        time = Int(second)
+        
+        let endSecond = pickedMusicData?.chosenMusicTimer ?? 0
+        guard second < endSecond
+        else
+        {
+            self.performSegue(withIdentifier: "goToBreathingSessionDone", sender: self)
+            return
+        }
+        
+        if second == 0          { breatheLabel.text = "Get settled" }
+        else if second == 1.5   { breatheLabel.text = "into a comfortable" }
+        else if second == 2.5   { breatheLabel.text = "position on your bed" }
+        else if second == 6.5   { breatheLabel.text = "Let go of any tension" }
+        else if second == 9     { breatheLabel.text = "you might be holding" }
+        else if second == 12    { breatheLabel.text = "Feel your head" }
+        else if second == 13.5  { breatheLabel.text = "sink deeper" }
+        else if second == 16    { breatheLabel.text = "into your pillow" }
+        else if second == 18.5  { breatheLabel.text = "Close your Eyes" }
+        else if second == 21.5  { breatheLabel.text = "And now," }
+        else if second == 23.5    { breatheLabel.text = "Let's begin" }
+        else if second >= 30 && second == Double(Int(second))
+        {
+            let baseSecond = Int(second) - 30
+            
+            if baseSecond % 10 == 0
+            {
+                instructorVoicePlayer.playAudio(musicAudio: "Breathe")
+                breatheLabel.text = "Breathe In"
+                UIView.animate(
+                    withDuration: 3,
+                    delay: 0,
+                    options: .curveEaseIn,
+                    animations:
+                        {
+                            [weak self] in
+                            self?.moonGlowView.alpha = 1
+                            self?.breatheLabel.alpha = 1
+                        }
+                )
+            }
+            else if baseSecond % 5 == 0
+            {
+                UIView.transition(
+                    with: self.breatheLabel,
+                    duration: 1,
+                    options: .transitionFlipFromBottom,
+                    animations:
+                        {
+                            [weak self] in
+                            self?.breatheLabel.text = "Breathe Out"
+                        },
+                    completion: nil
+                )
+                UIView.animate(
+                    withDuration: 3,
+                    delay: 1,
+                    options: .curveEaseOut,
+                    animations:
+                        {
+                            [weak self] in
+                            self?.moonGlowView.alpha = 0
+                            self?.breatheLabel.alpha = 0
+                        }
+                )
+            }
+        }
+        
+        if second == Double(Int(second))
+        {
+            breatheProgressBar.setProgress(Float(second/endSecond), animated: true)
+            currentProgressLabel.text = StaticFunction.secondToHHMMSS(Int(second))
+        }
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5)
+        {
+            [weak self] in
+            self?.playAndCheck(second: self?.currentPlayAudio == false ? second : second + 0.5)
+        }
+    }
     
     override func viewDidLoad()
     {
@@ -47,226 +132,39 @@ class BreathingSessionViewController: UIViewController
         let theMusicTimer = pickedMusicData?.chosenMusicTimer ?? 0.0
         let theMusicRepeat = pickedMusicData?.chosenMusicRepeat ?? 0.0
         
-        print("This is the Picked Music Audio: \(theMusicAudio)")
-        print("This is the Picked Music Timer: \(theMusicTimer)")
-        print("This is the Picked Music Repeat: \(theMusicRepeat)")
-        
         // USE THIS FUNCTION TO PLAY ALL OF THE AUDIO FILES V2: THE MUSIC COMES SINCE IN THE BEGINNING WITH THE OPENING + CHANGING THE BREATHE LABEL
         twoAudioPlayer.playAudio(musicAudio: theMusicAudio, totalMusicRepeat: Int(theMusicRepeat))
         
-        // CHANGING THE BREATH LABEL ABOVE THE MOON
-        breatheLabel.text = "Get settled"
-        DispatchQueue.main.asyncAfter(deadline: .now()+1.5) {
-            self.breatheLabel.text = "into a comfortable"
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now()+2.7) {
-            self.breatheLabel.text = "position on your bed"
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now()+6.5) {
-            self.breatheLabel.text = "Let go of any tension"
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now()+9) {
-            self.breatheLabel.text = "you might be holding"
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now()+12.1) {
-            self.breatheLabel.text = "Feel your head"
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now()+13.5) {
-            self.breatheLabel.text = "sink deeper"
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now()+16) {
-            self.breatheLabel.text = "into your pillow"
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now()+18.7) {
-            self.breatheLabel.text = "Close your Eyes"
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now()+21.5) {
-            self.breatheLabel.text = "And now,"
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now()+23.9) {
-            self.breatheLabel.text = "Let's begin"
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now()+26) {
-            UIView.animate(withDuration: 1, animations: {
-                self.breatheLabel.alpha = 0.0
-            })
-        }
-        
-        // STARTING THE BREATHING EXERCISE: PLAY THE INSTRUCTOR VOICE & CHANGE THE BREATHE LABEL AUTOMATICALLY
-        moonGlowView.alpha = 0.0 // Initiate the moonGlowView Opacity to 0
-        
-        DispatchQueue.main.asyncAfter(deadline: .now()+27) {
-            print("Async after 27 seconds")
-            self.breatheLabel.text = "Breathe In"
-            UIView.animate(withDuration: 1, animations: {
-                self.breatheLabel.alpha = 1.0
-            })
-            DispatchQueue.main.asyncAfter(deadline: .now()+3) {
-                UIView.animate(withDuration: 1, animations: {
-                    self.breatheLabel.alpha = 0.0
-                })
-            }
-            self.instructorVoicePlayer.playAudio(musicAudio: "Breathe", totalMusicRepeat: 87)
-//            self.animateMoonGlow(isGlowSizeSmall: true)
-//            self.animateMoonGlowBig()
-            UIView.animate(withDuration: 5, animations: {
-                self.moonGlowView.alpha = 1.0
-            })
-            
-            for currentBreatheTime in 1...870 {
-                DispatchQueue.main.asyncAfter(deadline: .now()+Double(currentBreatheTime)+0.1) {
-                    print("currentBreatheTime: \(currentBreatheTime)")
-                    if currentBreatheTime % 5 == 0 && currentBreatheTime % 10 != 0 {
-                        print("Result currentBreatheTime % 5 : \(currentBreatheTime % 5)")
-                        
-                        self.breatheLabel.text = "Breathe Out"
-                        UIView.animate(withDuration: 1, animations: {
-                            self.breatheLabel.alpha = 1.0
-                        })
-                        DispatchQueue.main.asyncAfter(deadline: .now()+3) {
-                            UIView.animate(withDuration: 1, animations: {
-                                self.breatheLabel.alpha = 0.0
-                            })
-                        }
-                        print("the breatheLabel.text : \(String(describing: self.breatheLabel.text))")
-                        
-                        UIView.animate(withDuration: 5, animations: {
-                            self.moonGlowView.alpha = 0.0
-                        })
-//                        self.animateMoonGlowBig()
-//                        self.animateMoonGlow(isGlowSizeSmall: true)
-                    } else if currentBreatheTime % 10 == 0 {
-                        print("Result currentBreatheTime % 10 : \(currentBreatheTime % 10)")
-                        
-                        self.breatheLabel.text = "Breathe In"
-                        UIView.animate(withDuration: 1, animations: {
-                            self.breatheLabel.alpha = 1.0
-                        })
-                        DispatchQueue.main.asyncAfter(deadline: .now()+3) {
-                            UIView.animate(withDuration: 1, animations: {
-                                self.breatheLabel.alpha = 0.0
-                            })
-                        }
-                        print("the breatheLabel.text : \(String(describing: self.breatheLabel.text))")
-                        
-                        UIView.animate(withDuration: 5, animations: {
-                            self.moonGlowView.alpha = 1.0
-                        })
-//                        self.animateMoonGlowSmall()
-//                        self.animateMoonGlow(isGlowSizeSmall: false)
-                    }
-                }
-            }
-        }
-        
-        breatheProgressBar.setProgress(0.0, animated: false)
-        currentProgressLabel.text = "00:00"
-        
-        // USE THIS TO USE THE PROGRESS BAR
-        for currentProgress in 1...900 {
-            DispatchQueue.main.asyncAfter(deadline: .now()+Double(currentProgress), execute: {
-                print("currentProgress for Bar and Label : \(currentProgress)")
-                
-                // Update the Progress Bar
-                self.breatheProgressBar.setProgress(Float(currentProgress)/900, animated: true)
-                
-                // Update the Progress Label
-                if currentProgress < 10 {
-                    self.currentProgressLabel.text = "00:0\(currentProgress)"
-                } else if currentProgress < 60 {
-                    self.currentProgressLabel.text = "00:\(currentProgress)"
-                } else if currentProgress < 70 {
-                    self.currentProgressLabel.text = "01:0\(currentProgress-60)"
-                } else if currentProgress < 120 {
-                    self.currentProgressLabel.text = "01:\(currentProgress-60)"
-                } else if currentProgress < 130 {
-                    self.currentProgressLabel.text = "02:0\(currentProgress-120)"
-                } else if currentProgress < 180 {
-                    self.currentProgressLabel.text = "02:\(currentProgress-120)"
-                } else if currentProgress < 190 {
-                    self.currentProgressLabel.text = "03:0\(currentProgress-180)"
-                } else if currentProgress < 240 {
-                    self.currentProgressLabel.text = "03:\(currentProgress-180)"
-                } else if currentProgress < 250 {
-                    self.currentProgressLabel.text = "04:0\(currentProgress-240)"
-                } else if currentProgress < 300 {
-                    self.currentProgressLabel.text = "04:\(currentProgress-240)"
-                } else if currentProgress < 310 {
-                    self.currentProgressLabel.text = "05:0\(currentProgress-300)"
-                } else if currentProgress < 360 {
-                    self.currentProgressLabel.text = "05:\(currentProgress-300)"
-                } else if currentProgress < 370 {
-                    self.currentProgressLabel.text = "06:0\(currentProgress-360)"
-                } else if currentProgress < 420 {
-                    self.currentProgressLabel.text = "06:\(currentProgress-360)"
-                } else if currentProgress < 430 {
-                    self.currentProgressLabel.text = "07:0\(currentProgress-420)"
-                } else if currentProgress < 480 {
-                    self.currentProgressLabel.text = "07:\(currentProgress-420)"
-                } else if currentProgress < 490 {
-                    self.currentProgressLabel.text = "08:0\(currentProgress-480)"
-                } else if currentProgress < 540 {
-                    self.currentProgressLabel.text = "08:\(currentProgress-480)"
-                } else if currentProgress < 550 {
-                    self.currentProgressLabel.text = "09:0\(currentProgress-540)"
-                } else if currentProgress < 600 {
-                    self.currentProgressLabel.text = "09:\(currentProgress-540)"
-                } else if currentProgress < 610 {
-                    self.currentProgressLabel.text = "10:0\(currentProgress-600)"
-                } else if currentProgress < 660 {
-                    self.currentProgressLabel.text = "10:\(currentProgress-600)"
-                } else if currentProgress < 670 {
-                    self.currentProgressLabel.text = "11:0\(currentProgress-660)"
-                } else if currentProgress < 720 {
-                    self.currentProgressLabel.text = "11:\(currentProgress-660)"
-                } else if currentProgress < 730 {
-                    self.currentProgressLabel.text = "12:0\(currentProgress-720)"
-                } else if currentProgress < 780 {
-                    self.currentProgressLabel.text = "12:\(currentProgress-720)"
-                } else if currentProgress < 790 {
-                    self.currentProgressLabel.text = "13:0\(currentProgress-780)"
-                } else if currentProgress < 840 {
-                    self.currentProgressLabel.text = "13:\(currentProgress-780)"
-                } else if currentProgress < 850 {
-                    self.currentProgressLabel.text = "14:0\(currentProgress-840)"
-                } else if currentProgress < 900 {
-                    self.currentProgressLabel.text = "14:\(currentProgress-840)"
-                } else {
-                    self.currentProgressLabel.text = "15:00"
-                    // The BreathingSessionViewController Changes to the BreathingSessionDoneViewController (Using Segue)
-                    self.performSegue(withIdentifier: "goToBreathingSessionDone", sender: self)
-                }
-            })
-        }
+        moonGlowView.alpha = 0
+        totalTimeLabel.text = StaticFunction.secondToHHMMSS(Int(pickedMusicData?.chosenMusicTimer ?? 0))
+        playAndCheck(second: 0)
     }
     
     @IBAction func closeButtonPressed(_ sender: UIButton) {
         instructorVoicePlayer.player?.stop()
         twoAudioPlayer.musicPlayer?.stop()
         twoAudioPlayer.voicePlayer?.stop()
-        dismiss(animated: true, completion: nil)
-//        performSegue(withIdentifier: "sessionFinishedIncomplete", sender: self)
+//        dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "sessionFinishedIncomplete", sender: self)
     }
     
     @IBAction func pauseBreathingButtonPressed(_ sender: UIButton) {
         if currentPlayAudio {
-            instructorVoicePlayer.player?.pause()
             twoAudioPlayer.musicPlayer?.pause()
+            if time < 30 { twoAudioPlayer.voicePlayer?.pause() }
+            else { instructorVoicePlayer.player?.pause() }
             pauseBreathingButton.setImage(UIImage(systemName: "play.fill"), for: .normal)
             currentPlayAudio = false
         } else {
-            instructorVoicePlayer.player?.play()
             twoAudioPlayer.musicPlayer?.play()
+            if time < 30 { twoAudioPlayer.voicePlayer?.play() }
+            else { instructorVoicePlayer.player?.play() }
             pauseBreathingButton.setImage(UIImage(systemName: "pause.fill"), for: .normal)
             currentPlayAudio = true
         }
-        print("currentPlayAudio : \(currentPlayAudio)")
     }
     
     @IBAction func muteMusicButtonPressed(_ sender: UIButton) {
-        print("Current Music Volume : \(String(describing: twoAudioPlayer.musicPlayer?.volume))")
-        print("Current Mute Music (Before): \(currentMuteMusic)")
-        
         if currentMuteMusic {
             twoAudioPlayer.musicPlayer?.setVolume(0.5, fadeDuration: 0)
             self.muteMusicButton.setImage(UIImage(named: "Mute Music"), for: .normal)
@@ -277,13 +175,9 @@ class BreathingSessionViewController: UIViewController
             self.muteMusicButton.setImage(UIImage(named: "Unmute Music"), for: .normal)
             self.currentMuteMusic = true
         }
-        print("Current Mute Music (After): \(currentMuteMusic)")
     }
     
     @IBAction func muteInstructorButtonPressed(_ sender: UIButton) {
-        print("Current Instructor Voice Volume : \(String(describing: twoAudioPlayer.voicePlayer?.volume))")
-        print("Current Mute Instructor Voice (Before): \(currentMuteInstructor)")
-        
         if currentMuteInstructor {
             instructorVoicePlayer.player?.setVolume(2.0, fadeDuration: 0)
             twoAudioPlayer.voicePlayer?.setVolume(1.5, fadeDuration: 0)
@@ -295,7 +189,6 @@ class BreathingSessionViewController: UIViewController
             self.muteInstructorButton.setImage(UIImage(named: "Unmute Instructor"), for: .normal)
             currentMuteInstructor = true
         }
-        print("Current Mute Instructor Voice (After): \(currentMuteInstructor)")
     }
 
     // MARK: - Navigation
