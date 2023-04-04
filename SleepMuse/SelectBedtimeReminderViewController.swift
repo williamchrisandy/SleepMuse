@@ -230,6 +230,7 @@ class SelectBedtimeReminderViewController: UIViewController
         let content = UNMutableNotificationContent()
         content.title = "Sleep Time!"
         content.body = "It is your time to sleep now. Open SleepMuse to help you fall asleep faster."
+        content.sound = .default
         
         var dateComponents = DateComponents()
         dateComponents.calendar = Calendar.current

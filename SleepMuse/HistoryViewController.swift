@@ -79,6 +79,9 @@ class HistoryViewController: UIViewController, UICollectionViewDataSource, UICol
             arraySessionWeekly.append(SessionSection(startDate: weekStartDate))
         }
         
+        pageControlDaily.numberOfPages = arraySessionDaily.count
+        pageControlWeekly.numberOfPages = arraySessionWeekly.count
+        
         do
         {
             let fetchRequest: NSFetchRequest<Session> = Session.fetchRequest(since: startDate)
@@ -114,9 +117,6 @@ class HistoryViewController: UIViewController, UICollectionViewDataSource, UICol
                     targetData.totalDuration += session.duration
                     targetData.startTime[Int(StaticFunction.dateToHourString(session.startTime!))!] += 1;
                 }
-                
-                pageControlDaily.numberOfPages = arraySessionDaily.count
-                pageControlWeekly.numberOfPages = arraySessionWeekly.count
                 
                 collectionViewDaily.reloadData()
                 collectionViewWeekly.reloadData()
